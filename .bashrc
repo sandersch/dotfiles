@@ -110,7 +110,7 @@ fi # [[ -n "$PS1" ]]
 
 # Add clojure stuff to my session
 export CLOJURE_EXT=~/.clojure
-PATH=~/bin/:$PATH:~/opt/clojure-contrib/launchers/bash
+PATH=$PATH:~/opt/clojure-contrib/launchers/bash
 alias clj=clj-env-dir
 
 # Enable vi style line editing mode (ksh broke my brain)
