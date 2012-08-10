@@ -29,8 +29,7 @@ alias mythfs='mythfrontend -nw -geometry 1920x1080+0+0'
 alias lmp3="ls *.mp3 > list && chmod a+x list && vim list"
 
 burndir() { 
-    growisofs -dvd-compat -Z /dev/dvdrw2 -R -J -V "$1" "$1" && mplayer /usr/share/sounds/KDE-Im-Phone-Ring.ogg
+    growisofs -dvd-compat -Z /dev/dvdrw3 -R -J -V "$1" "$1" && mplayer /usr/share/sounds/KDE-Im-Phone-Ring.ogg
 }
 
-/usr/bin/keychain id_dsa id_rsa
-. ~/.keychain/`uname -n`-sh
+alias gst='git status'
