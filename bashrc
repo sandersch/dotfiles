@@ -46,13 +46,13 @@ if [[ -n "$PS1" ]]; then
     esac
 
     # Prompt setup
-    if [ -f ~/.bash_prompt ]; then
-        . ~/.bash_prompt
+    if [ -f ~/dotfiles/bash_prompt ]; then
+        . ~/dotfiles/bash_prompt
     fi
 
     # Alias definitions.
-    if [ -f ~/.bash_aliases ]; then
-        . ~/.bash_aliases
+    if [ -f ~/.bash_alias ]; then
+        . ~/.bash_alias
     fi
 
     # Enable programmable completion features
