@@ -46,3 +46,5 @@ unset color_prompt force_color_prompt
 
 # Enable vi style line editing mode (ksh broke my brain)
 set -o vi
+
+source ~/dotfiles/git-completion.bash
