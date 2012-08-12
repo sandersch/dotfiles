@@ -49,3 +49,6 @@ burndir() {
 
 alias gst='git status'
 alias update_submodules='git pull --recurse-submodules && git submodule update'
+
+# Force 256 color mode in tmux
+alias tmux='tmux -2'
