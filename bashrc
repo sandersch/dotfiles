@@ -35,16 +35,6 @@ if [[ -n "$PS1" ]]; then
     # make less more friendly for non-text input files, see lesspipe(1)
     [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-
-    # If this is an xterm set the title to user@host:dir
-    case "$TERM" in
-        xterm*|rxvt*)
-            PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-            ;;
-        *)
-            ;;
-    esac
-
     # Prompt setup
     if [ -f ~/dotfiles/bash_prompt ]; then
         . ~/dotfiles/bash_prompt
