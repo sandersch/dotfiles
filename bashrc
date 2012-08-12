@@ -15,7 +15,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Anything inside here only gets executed in interactive shells
 if [[ -n "$PS1" ]]; then 
-    TERM=xterm-256color
+    #TERM=xterm-256color
 
     # don't put duplicate lines in the history. See bash(1) for more options
     # ... or force ignoredups and ignorespace
@@ -70,6 +70,3 @@ if [[ -n "$PS1" ]]; then
     . ~/.keychain/$HOSTNAME-sh
     . ~/.keychain/$HOSTNAME-sh-gpg
 fi # [[ -n "$PS1" ]]
-
-
-
