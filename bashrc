@@ -16,8 +16,6 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Anything inside here only gets executed in interactive shells
 if [[ -n "$PS1" ]]; then 
-    #TERM=xterm-256color
-
     # don't put duplicate lines in the history. See bash(1) for more options
     # ... or force ignoredups and ignorespace
     HISTCONTROL=ignoredups:ignorespace
@@ -51,10 +49,6 @@ if [[ -n "$PS1" ]]; then
         . /etc/bash_completion
     fi
 
-    # Add clojure stuff to my session
-    export CLOJURE_EXT=~/.clojure
-    PATH=$PATH:~/opt/clojure-contrib/launchers/bash
-    alias clj=clj-env-dir
 
     # Set up keychain
     keychain ~/.ssh/id_dsa
