@@ -16,8 +16,6 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Anything inside here only gets executed in interactive shells
 if [[ -n "$PS1" ]]; then 
-    #TERM=xterm-256color
-
     # don't put duplicate lines in the history. See bash(1) for more options
     # ... or force ignoredups and ignorespace
     HISTCONTROL=ignoredups:ignorespace
