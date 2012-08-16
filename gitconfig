@@ -1,0 +1,39 @@
+[user]
+    name = Charlie Sanders
+    email = sanderscharlie@gmail.com
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+
+[alias]
+    aliases = config --get-regexp '^alias\\.'
+    up = svn rebase
+    st = status
+    co = checkout
+    ci = commit
+    br = branch
+    cp = cherrypick
+    di = diff
+    qstat = status --untracked-files=no
+    graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    history = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    luser = !switchgituser.sh
+    oneline = log --oneline
+    p = pair
+    st = status
+    user = !switchgituser.sh
+    ufetch = !switchgituser.sh && git fetch
+    upush = !switchgituser.sh && git push
+    upull = !switchgituser.sh && git pull --rebase
+    unstage = reset HEAD
+
+[github]
+    user = sandersch
+
+[apply]
+    whitespace = strip
+    whitespace = nowarn
