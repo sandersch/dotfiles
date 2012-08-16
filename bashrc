@@ -7,6 +7,7 @@ export PATH=~/bin:$PATH
 ANDROID_SDK="${HOME}/android-sdk/"
 [ -d "${ANDROID_SDK}/tools" ] && export PATH=${PATH}:${ANDROID_SDK}/tools
 [ -d "${ANDROID_SDK}/platform-tools" ] && export PATH=${PATH}:${ANDROID_SDK}/platform-tools
+unset ANDROID_SDK
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
