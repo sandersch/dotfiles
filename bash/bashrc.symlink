@@ -35,13 +35,13 @@ if [[ -n "$PS1" ]]; then
     [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
     # Prompt setup
-    if [ -f ~/dotfiles/bash_prompt ]; then
-        . ~/dotfiles/bash_prompt
+    if [ -f ~/dotfiles/bash/prompt.bash ]; then
+        . ~/dotfiles/bash/prompt.bash
     fi
 
     # Alias definitions.
-    if [ -f ~/.bash_alias ]; then
-        . ~/.bash_alias
+    if [ -f ~/dotfiles/bash/aliases.bash ]; then
+        . ~/dotfiles/bash/aliases.bash
     fi
 
     # Enable programmable completion features
