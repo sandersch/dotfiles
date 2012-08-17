@@ -29,7 +29,7 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-source ~/dotfiles/git-completion.bash
+source ~/dotfiles/git/completion.bash
 
 if [ "$color_prompt" = yes ]; then
     PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[32m\]$(__git_ps1)\[\033[0m\]$ '
