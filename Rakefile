@@ -2,8 +2,17 @@ require 'rake'
 
 task :default => [:install]
 
-desc 'Set up hooks needed outside of dotfiles directory'
-task :install do
+task :install => [:git_submodules_init, :symlinks] do
+  puts 'Install complete!'
+end
+
+task :git_submodules_init do
+  system "git submodule init"
+  system "git submodule update"
+end
+
+desc 'Create symlinks to dotfiles in home directory'
+task :symlinks do
   links = Dir.glob('**/*{.symlink}')
 
   skip_all = false
