@@ -51,6 +51,6 @@ if [[ -n "$PS1" ]]; then
 
 
     # Set up keychain
-    keychain ~/.ssh/id_dsa
+    keychain ~/.ssh/id_rsa ~/.ssh/id_dsa
     . ~/.keychain/$HOSTNAME-sh
 fi # [[ -n "$PS1" ]]
