@@ -39,7 +39,7 @@ hg_module=off
 #  Some don't like hostname in uppercase
 upcase_hostname=off # =off
 #  Some don't like long hostname
-#  short_hostname=off # =on
+short_hostname=on # =on
 
 #  Do not do VCS parsing for listed directories
 #  useful for directories for which it is difficult to maintain .gitignore so
