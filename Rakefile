@@ -43,7 +43,7 @@ task :symlinks do
     end
 
     # -T to treat target as normal file (ie never a directory)
-    `ln -sT "$PWD/#{link_source}" "#{target}"`
+    `ln -s "$PWD/#{link_source}" "#{target}"`
   end
 end
 
