@@ -37,7 +37,7 @@ hg_module=off
 ###########################################################   ETC
 
 #  Some don't like hostname in uppercase
-#  upcase_hostname=on # =off
+upcase_hostname=off # =off
 #  Some don't like long hostname
 #  short_hostname=off # =on
 
