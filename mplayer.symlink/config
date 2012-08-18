@@ -1,0 +1,6 @@
+# Write your default config options here!
+vo=vdpau,xvmc,xv,
+vc=ffh264vdpau,ffmpeg12vdpau,ffwmv3vdpau,ffvc1vdpau,
+alang=eng,en
+slang=eng,en
+af=scaletempo
