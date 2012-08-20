@@ -47,5 +47,7 @@ burndir() {
     growisofs -dvd-compat -Z /dev/dvdrw3 -R -J -V "$1" "$1" && mplayer /usr/share/sounds/KDE-Im-Phone-Ring.ogg
 }
 
-alias gst='git status'
-alias update_submodules='git pull --recurse-submodules && git submodule update'
+for FILE in ~/dotfiles/*/aliases.sh
+do
+    source $FILE
+done
