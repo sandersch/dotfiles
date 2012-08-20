@@ -30,7 +30,7 @@ alias cp='cp -v'
 alias mv='mv -v'
 
 # Run mplayer full screen on screen 0 and turn off the screensaver
-alias mplayerfs='mplayer -xineramascreen 1 -fs -zoom -stop-xscreensaver'
+alias mplayerfs='mplayer -fs -zoom -stop-xscreensaver'
 alias mplayerfs0='mplayer -xineramascreen 0 -fs -zoom -stop-xscreensaver'
 alias mplayerfs1='mplayer -xineramascreen 1 -fs -zoom -stop-xscreensaver'
 alias mplayerfs2='mplayer -xineramascreen 2 -fs -zoom -stop-xscreensaver'
