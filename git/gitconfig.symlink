@@ -9,14 +9,11 @@
 
 [alias]
     aliases = config --get-regexp '^alias\\.'
-    up = svn rebase
-    st = status
-    co = checkout
-    ci = commit
     br = branch
+    ci = commit
+    co = checkout
     cp = cherrypick
     di = diff
-    qstat = status --untracked-files=no
     graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     history = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
@@ -24,12 +21,15 @@
     luser = !switchgituser.sh
     oneline = log --oneline
     p = pair
+    qstat = status --untracked-files=no
     st = status
-    user = !switchgituser.sh
+    st = status
     ufetch = !switchgituser.sh && git fetch
-    upush = !switchgituser.sh && git push
-    upull = !switchgituser.sh && git pull --rebase
     unstage = reset HEAD
+    up = svn rebase
+    upull = !switchgituser.sh && git pull --rebase
+    upush = !switchgituser.sh && git push
+    user = !switchgituser.sh
 
 [github]
     user = sandersch
