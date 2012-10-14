@@ -69,8 +69,5 @@ vmap <C-j> ]egv
 " Turn On/Off NERDTree
 map <leader>n :NERDTreeToggle<CR>
 
-" Start Command-t with leader-t
-map <leader>t :CommandT<CR>
-
 " Open ctrl-p with leader-p
 map <leader>p :CtrlP<CR>
