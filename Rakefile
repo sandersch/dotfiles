@@ -1,11 +1,14 @@
+# Mostly from https://github.com/holman/dotfiles
 require 'rake'
 
 task :default => [:install]
 
-task :install => [:git_submodules_init, :symlinks] do
+desc "Install and update dotfiles (default)"
+task :install => [:git_submodules_init, :symlinks, 'vundle:install'] do
   puts 'Install complete!'
 end
 
+desc "Initialize and update git submodules"
 task :git_submodules_init do
   system "git submodule init"
   system "git submodule update"
@@ -47,9 +50,8 @@ task :symlinks do
   end
 end
 
-
+desc "Remove dotfile symlinks from home directory"
 task :uninstall do
-
   Dir.glob('**/*.symlink').each do |linkable|
 
     file = linkable.split('/').last.split('.symlink').last
@@ -64,8 +66,13 @@ task :uninstall do
     if File.exists?("#{ENV["HOME"]}/.#{file}.backup")
       `mv "$HOME/.#{file}.backup" "$HOME/.#{file}"` 
     end
-
   end
 end
 
-
+namespace "vundle" do
+  desc "Update vim plugins with vundle"
+  task :install do
+    puts 'Updating vim bundles with vundle. This may take a few minutes...'
+    `vim -u vim.symlink/bundles.vim +BundleInstall +qall`
+  end
+end
