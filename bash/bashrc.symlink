@@ -1,3 +1,6 @@
+# This is ususally the default, but enforce our assumption
+umask 022
+
 # Set up path
 
 # Put ~/bin at the front of the path
@@ -11,8 +14,9 @@ unset ANDROID_SDK
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-# Load rvm as a function
-[[ -s "/home/charlie/.rvm/scripts/rvm" ]] && source "/home/charlie/.rvm/scripts/rvm"
+# IMPORTANT: Load RVM into a shell session *as a function*
+#            Otherwise things like switching gemsets won't work.
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Anything inside here only gets executed in interactive shells
 if [[ -n "$PS1" ]]; then 
@@ -48,7 +52,6 @@ if [[ -n "$PS1" ]]; then
     if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
         . /etc/bash_completion
     fi
-
 
     # Set up keychain
     keychain ~/.ssh/id_rsa ~/.ssh/id_dsa
