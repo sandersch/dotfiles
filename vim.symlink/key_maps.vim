@@ -69,5 +69,8 @@ vmap <C-j> ]egv
 " Turn On/Off NERDTree
 map <leader>n :NERDTreeToggle<CR>
 
-" Open ctrl-p with leader-p
-map <leader>p :CtrlP<CR>
+" CtrlP maps
+map <leader>t :CtrlP<CR>
+map <leader>p :CtrlPMixed<CR>
+map <leader>b :CtrlPBuffer<CR>
+map <leader>m :CtrlPMRU<CR>
