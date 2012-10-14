@@ -4,3 +4,6 @@
 .VimballRecord
 .netrwhist
 tags
+mplayer.symlink/mplayer.symlink
+vim.symlink/vim.symlink
+vim.symlink/bundle/
