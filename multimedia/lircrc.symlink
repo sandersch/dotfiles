@@ -1,0 +1,212 @@
+begin
+    remote = mceusb
+    prog = mplayer
+    button = KEY_PLAY
+    config = pause
+    repeat = 0
+    delay = 0
+end
+
+begin
+    remote = mceusb
+    prog = mplayer
+    button = KEY_PAUSE
+    config = pause
+    repeat = 0
+    delay = 0
+end
+
+begin
+    remote = mceusb
+    prog = mplayer
+    button = KEY_OK
+    config = pause
+    repeat = 0
+    delay = 0
+end
+
+begin
+    remote = mceusb
+    prog = mplayer
+    button = KEY_POWER
+    config = quit
+    repeat = 0
+    delay = 0
+end
+
+begin
+    remote = mceusb
+    prog = mplayer
+    button = KEY_MUTE
+    config = mute
+    repeat = 0
+    delay = 0
+end
+
+begin
+    remote = mceusb
+    prog = mplayer
+    button = KEY_VOLUMEUP
+    config = volume +1
+    repeat = 1
+    delay = 0
+end
+
+begin
+    remote = mceusb
+    prog = mplayer
+    button = KEY_VOLUMEDOWN
+    config = volume -1
+    repeat = 1
+    delay = 0
+end
+
+begin
+    remote = mceusb
+    prog = mplayer
+    button = KEY_NEXT
+    config = seek +600 0
+    repeat = 3
+    delay = 0
+end
+
+begin
+    remote = mceusb
+    prog = mplayer
+    button = KEY_AGAIN
+    config = seek -600 0
+    repeat = 1
+    delay = 0
+end
+
+begin
+    remote = mceusb
+    prog = mplayer
+    button = KEY_ENTER
+    config = pause
+    repeat = 0
+    delay = 0
+end
+
+begin
+    remote = mceusb
+    prog = mplayer
+    button = KEY_STOP
+    config = quit
+    repeat = 0
+    delay = 0
+end
+
+begin
+    remote = mceusb
+    prog = mplayer
+    button = KEY_BACK
+    config = seek -15 0
+    repeat = 0
+    delay = 0
+end
+
+begin
+    remote = mceusb
+    prog = mplayer
+    button = KEY_FORWARD
+    config = seek +1 0
+    repeat = 1
+    delay = 0
+end
+
+begin
+    remote = mceusb
+    prog = mplayer
+    button = KEY_REWIND
+    config = seek -1 0
+    repeat = 1
+    delay = 0
+end
+
+begin
+    remote = mceusb
+    prog = mplayer
+    button = KEY_HOME
+    config = quit
+    repeat = 0
+    delay = 0
+end
+
+begin
+    remote = mceusb
+    prog = mplayer
+    button = KEY_UP
+    config = seek +300 0
+    repeat = 0
+    delay = 0
+end
+
+begin
+    remote = mceusb
+    prog = mplayer
+    button = KEY_DOWN
+    config = seek -300 0
+    repeat = 0
+    delay = 0
+end
+
+begin
+    remote = mceusb
+    prog = mplayer
+    button = KEY_RIGHT
+    config = seek +60 0
+    repeat = 3
+    delay = 0
+end
+
+begin
+    remote = mceusb
+    prog = mplayer
+    button = KEY_LEFT
+    config = seek -60 0
+    repeat = 3
+    delay = 0
+end
+
+begin
+    button = More
+    prog = mplayer
+    config = osd
+    repeat = 0
+    delay = 0
+end
+
+# red
+begin
+    button = Aspect
+    prog = mplayer
+    config = vo_fullscreen
+end
+
+# yellow
+begin
+    button = BB3
+    prog = mplayer
+    config = speed_mult 1.25
+    repeat = 5
+    delay = 0
+end
+
+# green
+begin
+    button = BB4
+    prog = mplayer
+    config = speed_mult 0.80
+    repeat = 5
+    delay = 0
+end
+
+# blue
+begin
+    button = BB2
+    prog = mplayer
+    config = sub_select
+    repeat = 0
+    delay = 0
+end
