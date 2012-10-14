@@ -5,7 +5,7 @@ set shortmess+=I        " Don't show the Vim welcome screen
 let mapleader=","       " Set this early in case other things use it
 
 " Vundle and bundles configuration
-source bundles.vim
+source $HOME/.vim/bundles.vim
 
 "Enable syntax highlightning and some nice filetype associations
 syntax enable
