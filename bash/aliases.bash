@@ -10,6 +10,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto --line-number'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
+else
+    alias ls='ls -G'
 fi
 
 # some more ls aliases
@@ -49,5 +51,6 @@ burndir() {
 
 for FILE in ~/dotfiles/*/aliases.sh
 do
+    echo "Sourcing $FILE..."
     source $FILE
 done
