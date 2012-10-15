@@ -51,6 +51,5 @@ burndir() {
 
 for FILE in ~/dotfiles/*/aliases.sh
 do
-    echo "Sourcing $FILE..."
     source $FILE
 done
