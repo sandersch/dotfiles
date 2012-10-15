@@ -1,23 +1,31 @@
 # enable color support of ls if it seems available
+export GREP_COLOR=33
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --classify --color=auto'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
 
     # Highlight search term in grep
-    export GREP_COLOR=33
     alias grep='grep --color=auto --line-number'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
+
+    LS_CMD='ls --classify --color=auto'
+elif $(gls &> /dev/null); then
+    # Highlight search term in grep
+    alias grep='grep --color=auto --line-number'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+
+    LS_CMD='gls --classify --color=auto'
 else
-    alias ls='ls -G'
+    LS_CMD='ls'
 fi
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias ls="$LS_CMD"
+alias ll="$LS_CMD -al"
+alias la="$LS_CMD -A"
+alias l="$LS_CMD -C"
 
 # Syntax highlighting for less (-R for RAW ^ colors)
 alias less='less -R'
