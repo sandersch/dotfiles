@@ -3,8 +3,8 @@ umask 022
 
 # Set up path
 
-# Put ~/bin at the front of the path
-export PATH=~/bin:$PATH
+# Put ~/dotfiles/bin and ~/bin at the front of the path
+export PATH="${HOME}/dotfiles/bin:${HOME}/bin:${PATH}"
 
 # Add android sdk tools to path if they exist
 ANDROID_SDK="${HOME}/android-sdk/"
