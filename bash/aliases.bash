@@ -26,7 +26,7 @@ unset USE_COLOR_CMDS
 alias ls="$LS_CMD"
 alias ll="$LS_CMD -al"
 alias la="$LS_CMD -A"
-alias l="$LS_CMD -C"
+alias l="$LS_CMD -lahrtc"
 
 # Syntax highlighting for less (-R for RAW ^ colors)
 alias less='less -R'
