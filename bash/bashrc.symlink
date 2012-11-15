@@ -1,6 +1,10 @@
 # This is ususally the default, but enforce our assumption
 umask 022
 
+# Set up an editor and pager
+export EDITOR=vim
+export PAGER=less
+
 # Set up path
 
 # Put ~/dotfiles/bin and ~/bin at the front of the path
