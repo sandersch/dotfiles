@@ -2,6 +2,9 @@
     name = Charlie Sanders
     email = sanderscharlie@gmail.com
 
+[github]
+    user = sandersch
+
 [color]
     ui = auto
     interactive = auto
@@ -56,6 +59,3 @@
     which-branches-contain = branch -a --contains
     which-tags-contain = name-rev --name-only
     wipe = !git reset --hard; git clean -fd
-
-[github]
-    user = sandersch
