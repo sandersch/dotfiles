@@ -3,11 +3,11 @@
 "
 
 "
-" Map j/k combos to get out of insert mode
-inoremap jk <esc>l
-inoremap kj <esc>l
-inoremap jj <esc>l
-inoremap kk <esc>l
+" Map j/k combos to get out of insert mode and turn off search highlighting
+inoremap jk <ESC>:noh<CR>
+inoremap kj <ESC>:noh<CR>
+inoremap jj <ESC>:noh<CR>
+inoremap kk <ESC>:noh<CR>
 
 " F2 inserts the date and time at the cursor.
 "
