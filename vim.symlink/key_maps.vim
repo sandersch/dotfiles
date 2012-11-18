@@ -92,3 +92,6 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Make it easier to invoke ack for searching
 nnoremap <leader>a :Ack<SPACE>
+
+" Reselect last pasted text. Makes it easy to adjust indention, etc
+nnoremap <leader>v V`]
