@@ -3,11 +3,11 @@
 "
 
 "
-" Map j/k combos to get out of insert mode
-inoremap jk <esc>l
-inoremap kj <esc>l
-inoremap jj <esc>l
-inoremap kk <esc>l
+" Map j/k combos to get out of insert mode and turn off search highlighting
+inoremap jk <ESC>:noh<CR>
+inoremap kj <ESC>:noh<CR>
+inoremap jj <ESC>:noh<CR>
+inoremap kk <ESC>:noh<CR>
 
 " F2 inserts the date and time at the cursor.
 "
@@ -74,3 +74,28 @@ map <leader>t :CtrlP<CR>
 map <leader>p :CtrlPMixed<CR>
 map <leader>b :CtrlPBuffer<CR>
 map <leader>m :CtrlPMRU<CR>
+
+" Get rid of the distracting search highlighting easily
+nnoremap <leader><space> :noh<cr>
+
+" Use tab to move between matching pairs. Much easier to hit than %
+nmap <tab> %
+vmap <tab> %
+
+" Move up and down by screen lines all the time
+nnoremap j gj
+nnoremap k gk
+
+" I hit <F1> more often when trying to hit ESC than when I want :help
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+
+" Strip all the trailing whitespace in the current file
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" Make it easier to invoke ack for searching
+nnoremap <leader>a :Ack<SPACE>
+
+" Reselect last pasted text. Makes it easy to adjust indention, etc
+nnoremap <leader>v V`]
