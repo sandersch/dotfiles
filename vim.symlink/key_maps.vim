@@ -74,3 +74,10 @@ map <leader>t :CtrlP<CR>
 map <leader>p :CtrlPMixed<CR>
 map <leader>b :CtrlPBuffer<CR>
 map <leader>m :CtrlPMRU<CR>
+
+" Get rid of the distracting search highlighting easily
+nnoremap <leader><space> :noh<cr>
+
+" Move up and down by screen lines all the time
+nnoremap j gj
+nnoremap k gk
