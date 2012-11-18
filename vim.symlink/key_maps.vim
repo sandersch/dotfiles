@@ -89,3 +89,6 @@ vnoremap <F1> <ESC>
 
 " Strip all the trailing whitespace in the current file
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" Make it easier to invoke ack for searching
+nnoremap <leader>a :Ack<SPACE>
