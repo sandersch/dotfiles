@@ -81,3 +81,8 @@ nnoremap <leader><space> :noh<cr>
 " Move up and down by screen lines all the time
 nnoremap j gj
 nnoremap k gk
+
+" I hit <F1> more often when trying to hit ESC than when I want :help
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
