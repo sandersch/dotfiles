@@ -78,6 +78,10 @@ map <leader>m :CtrlPMRU<CR>
 " Get rid of the distracting search highlighting easily
 nnoremap <leader><space> :noh<cr>
 
+" Use tab to move between matching pairs. Much easier to hit than %
+nmap <tab> %
+vmap <tab> %
+
 " Move up and down by screen lines all the time
 nnoremap j gj
 nnoremap k gk
