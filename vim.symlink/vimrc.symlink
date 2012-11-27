@@ -75,12 +75,6 @@ set hidden
 " e.g. to backspace past start of edit
 set backspace=indent,eol,start
 
-" Make the keyboard and mouse act more like Windows
-set selection=exclusive
-set selectmode=mouse,key
-set mousemodel=popup
-set keymodel=startsel,stopsel
-
 set whichwrap+=<,>,[,]
 
 set listchars=tab:>-,trail:·
