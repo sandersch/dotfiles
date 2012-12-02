@@ -44,10 +44,11 @@ alias mv='mv -v'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Simulate OSX's pbcopy/paste on Linux
-# TODO: only do this on systems with xsel
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
+# Simulate OSX's pbcopy and pbpaste on other platforms
+if [ ! $(uname -s) = "Darwin" ]; then
+    alias pbcopy='xsel --clipboard --input'
+    alias pbpaste='xsel --clipboard --output'
+fi
 
 for FILE in ~/dotfiles/*/aliases.sh
 do
