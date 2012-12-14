@@ -45,8 +45,7 @@ task :symlinks do
       `mv "$HOME/.#{file}" "$HOME/.#{file}.backup"` if backup || backup_all
     end
 
-    # -T to treat target as normal file (ie never a directory)
-    `ln -s "$PWD/#{link_source}" "#{target}"`
+    `ln -s "$PWD/#{link_source}" "#{target}"` if !skip_all
   end
 end
 
