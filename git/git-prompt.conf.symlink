@@ -80,6 +80,7 @@ fi
 ##            AHP_host_color=white
 SMITH_host_color=BLUE
 MAVERICK_host_color=yellow
+NIOBE_host_color=GREEN
 NEO_host_color=WHITE
 TANK_host_color=RED
 
