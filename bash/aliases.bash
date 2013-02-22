@@ -49,6 +49,8 @@ if [ -f /etc/debian_version ]; then
   alias update_system="sudo bash -c 'apt-get -y update && apt-get -y upgrade && apt-get -y dist-upgrade && apt-get -y autoremove'"
 elif [ -f /etc/redhat-release ]; then
   alias update_system="sudo bash -c 'yum -y update'"
+elif [ $(uname -s) = "Darwin" ]; then
+  alias update_system="brew update && brew upgrade"
 fi
 
 # Simulate OSX's pbcopy and pbpaste on other platforms
