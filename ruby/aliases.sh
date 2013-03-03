@@ -1,4 +1,5 @@
 # Rails Commands
+alias bake='bundle exec rake'
 alias be='bundle exec'
 alias dbm='bundle exec rake db:migrate'
 alias r='bundle exec rails'
