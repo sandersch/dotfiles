@@ -71,7 +71,7 @@ set t_vb=
 " keep changed buffers without requiring saves
 set hidden
 
-" Act more 'normal' about backpacking
+" Act more 'normal' about backspacing
 " e.g. to backspace past start of edit
 set backspace=indent,eol,start
 
