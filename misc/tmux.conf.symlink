@@ -16,10 +16,6 @@ set-window-option -g xterm-keys on
 # minimize delay
 set -sg escape-time 100
 
-# force a reload of the config file
-unbind r
-bind r source-file ~/.tmux.conf; display "Reloaded"
-
 # quick pane cycling
 bind -r b select-pane -t :.+
 
