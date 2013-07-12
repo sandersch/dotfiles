@@ -25,7 +25,7 @@
 --type-set=bash=.bash,.sh
 
 # When looking for Ruby files, include HAML files, rake files, rabl files
---type-add=ruby=.haml,.rake,.rabl
+--type-add=ruby=.haml,.rake,.rabl,.lic
 
 # When looking for CSS files, include Sass and Less files (which get compiled into CSS).
 --type-add=css=.sass,.scss,.less
