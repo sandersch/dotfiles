@@ -5,6 +5,7 @@ alias mplayerfs1='mplayer -xineramascreen 1 -fs -zoom -stop-xscreensaver'
 alias mplayerfs2='mplayer -xineramascreen 2 -fs -zoom -stop-xscreensaver'
 alias mplayerfs3='mplayer -xineramascreen 3 -fs -zoom -stop-xscreensaver'
 alias mythfs='mythfrontend -nw -geometry 1920x1080+3840+0'
+alias mythqs='mythfrontend -w -geometry 920x540'
 
 alias lmp3="ls *.mp3 > list && chmod a+x list && vim list"
 
