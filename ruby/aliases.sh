@@ -1,4 +1,3 @@
-# Rails Commands
 alias bake='bundle exec rake'
 alias be='bundle exec'
 alias dbm='bundle exec rake db:migrate'
@@ -8,3 +7,4 @@ alias rg='bundle exec rails g'
 alias rlog='tail -f log/development.log'
 alias rn='bundle exec rails new'
 alias rs='bundle exec rails s'
+alias ru='bundle exec rackup'
