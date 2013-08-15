@@ -30,5 +30,10 @@ ab receve receive
 ab recieve receive
 ab recive receive
 ab wrt with regard to
-ab n- &ndash;
-ab m- &mdash;
+
+augroup markdown
+  autocmd!
+  autocmd FileType markdown :iabbrev <buffer> ... …
+  autocmd FileType markdown :iabbrev <buffer> n- &ndash;
+  autocmd FileType markdown :iabbrev <buffer> m- &mdash;
+augroup END
