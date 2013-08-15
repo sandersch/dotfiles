@@ -14,6 +14,8 @@ ab functin function
 ab functon function
 ab funtinon function
 ab grammer grammar
+ab hundread hundred
+ab hundreads hundreds
 ab idion idiom
 ab idions idioms
 ab initalize initialize
