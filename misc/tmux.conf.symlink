@@ -92,3 +92,5 @@ bind-key -t vi-copy 'y' copy-selection
 
 # and set the window options globally (-g) using vi-style mode keys
 setw -g mode-keys vi
+
+source-file ~/.tmux.local
