@@ -2,14 +2,7 @@ Abolish communcition{,s} communication{}
 Abolish connetion{,s} connection{}
 Abolish conjuction{,s} conjunction{}
 Abolish destory{,s} destroy{}
-Abolish fucniton{,s} function{}
-Abolish fucniton{,s} function{}
-Abolish fucntion{,s} function{}
-Abolish fuction{,s} function{}
-Abolish funciton{,s} function{}
-Abolish functin{,s} function{}
-Abolish functon{,s} function{}
-Abolish funtinon{,s} function{}
+Abolish fu{cnito,cnito,cntio,ctio,ncito,ncti,ncto,ntino}n{,s} fu{nctio}n{}
 Abolish grammer grammar
 Abolish hundread{,s} hundred{}
 Abolish idion{,s} idiom
