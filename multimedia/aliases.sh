@@ -10,5 +10,5 @@ alias mythqs='mythfrontend -w -geometry 920x540'
 alias lmp3="ls *.mp3 > list && chmod a+x list && vim list"
 
 burndir() {
-    growisofs -dvd-compat -Z /dev/dvdrw3 -R -J -V "$1" "$1" && mplayer /usr/share/sounds/KDE-Im-Phone-Ring.ogg
+    growisofs -dvd-compat -Z /dev/sr0 -R -J -V "$1" "$1" && mplayer /usr/share/sounds/KDE-Im-Phone-Ring.ogg
 }
