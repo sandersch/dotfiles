@@ -17,6 +17,5 @@ burndir_with() {
   full_dir_name=`readlink -f "$1"`
   volume_title=`basename "$full_dir_name" | perl -ne 'chomp and print'`
 
-  growisofs -dvd-compat -Z "$2" -R -J -V "$volume_title" "$1" #\
-    #&& mplayer /usr/share/sounds/KDE-Im-Phone-Ring.ogg
+  growisofs -dvd-compat -Z "$2" -R -J -V "$volume_title" "$1"
 }
