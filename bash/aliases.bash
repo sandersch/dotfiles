@@ -47,6 +47,9 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # Fully update operating system
 if [ -f /etc/debian_version ]; then
   alias update_system="sudo bash -c 'apt-get -y update && apt-get -y upgrade && apt-get -y dist-upgrade && apt-get -y autoremove'"
+  remove_old_kernels() {
+    sudo apt-get remove --purge $(dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d')
+  }
 elif [ -f /etc/redhat-release ]; then
   alias update_system="sudo bash -c 'yum -y update'"
 elif [ $(uname -s) = "Darwin" ]; then
