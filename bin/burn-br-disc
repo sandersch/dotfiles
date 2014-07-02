@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -e
+
+DIR_TO_BURN=$PWD
+DISC_NAME=`basename "$PWD"`
+
+UDF_FILE="/mnt/build/bluray/$DISC_NAME.udf"
+BR_DRIVE="/dev/sr0"
+
+# estimated padding: 25025314816 - 25022689280 = 2625536
+truncate -s 25025314816 "$UDF_FILE"
+mkudffs --vid="$DISC_NAME" "$UDF_FILE"
+
+sudo losetup -f "$UDF_FILE"
+sudo mount /dev/loop0 /mnt/loop/
+
+sudo cp -avL "$DIR_TO_BURN" /mnt/loop/
+
+sudo umount /dev/loop0
+sudo losetup -d /dev/loop0
+
+/opt/schily/bin/cdrecord -v -dao driveropts=burnfree dev="$BR_DRIVE" "$UDF_FILE"
+
+eject "$BR_DRIVE"
+rm -rf "$UDF_FILE"
