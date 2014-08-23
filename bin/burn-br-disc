@@ -8,8 +8,12 @@ DISC_NAME=`basename "$PWD"`
 UDF_FILE="/mnt/build/bluray/$DISC_NAME.udf"
 BR_DRIVE="/dev/sr0"
 
-# estimated padding: 25025314816 - 25022689280 = 2625536
-truncate -s 25025314816 "$UDF_FILE"
+PADDING_BYTES=2727936
+BYTES_OF_FILES=`du -scbD "$DIR_TO_BURN" | head -n1 | awk '{print $1}'`
+TOTAL_BYTES=`expr $BYTES_OF_FILES + $PADDING_BYTES`
+TOTAL_BYTES=`expr $TOTAL_BYTES + \( $TOTAL_BYTES % 2048 \)`
+
+truncate -s $TOTAL_BYTES "$UDF_FILE"
 mkudffs --vid="$DISC_NAME" "$UDF_FILE"
 
 sudo losetup -f "$UDF_FILE"
