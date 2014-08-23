@@ -9,6 +9,9 @@ alias mythqs='mythfrontend -w -geometry 920x540'
 
 alias lmp3="ls *.mp3 > list && chmod a+x list && vim list"
 
+# Presets for splitting directory to prepare for burning to common disc size
+alias split_br='dirsplit --size 25025314816 --simple --verbose --hardlink'
+
 burndir() {
   burndir_with "$1" "/dev/sr0"
 }
