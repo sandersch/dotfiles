@@ -17,7 +17,6 @@ ANDROID_SDK="${HOME}/android-sdk/"
 unset ANDROID_SDK
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[ -d "${HOME}/src/elixir/bin" ] && export PATH=${PATH}:${HOME}/src/elixir/bin
 [ -d "/usr/local/heroku/bin:$PATH" ] && export PATH="/usr/local/heroku/bin:$PATH"
 
 # IMPORTANT: Load RVM into a shell session *as a function*
