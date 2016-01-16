@@ -1,10 +1,9 @@
 <settings>
   <highlight fg='9090ff'>^(?:You gesture(?! at)|You intone a phrase of elemental power|You recite a series of mystical phrases|You trace a series of glowing runes|Your hands glow with power as you invoke|You trace a simple rune while intoning|You trace a sign while petitioning the spirits|You trace an intricate sign that contorts in the air).*$</highlight>
   <highlight fg='9090ff'>^(?:Cast Roundtime 3 Seconds\.|Your spell is ready\.)$</highlight>
-  <highlight fg='9090ff'>^.*remaining\. \]$</highlight>
   <highlight fg='88aaff'>([A-Z][a-z]+ disk)</highlight>
-  <highlight fg='555555'>^\[.*?\](?:>|&gt;).*$</highlight>
-  <highlight fg='555555'>\([0-9][0-9]\:[0-9][0-9]\:[0-9][0-9]\)$</highlight>
+  <highlight tags="lich muted" fg='555555'>^\[.*?\](?:>|&gt;).*$</highlight>
+  <highlight tags="lich muted" fg='555555'>\([0-9][0-9]\:[0-9][0-9]\:[0-9][0-9]\)$</highlight>
   <highlight tags='chat' fg='0000ff'>^\[LNet\]</highlight>
   <highlight tags='chat' fg='008000'>^\[code\]</highlight>
   <highlight tags='chat' fg='808000'>^\[Prime\]</highlight>
@@ -23,13 +22,12 @@
   <highlight fg='ffff00'>SEND\[</highlight>
 
   <highlight fg='00ffff'>^You (?:gesture at|attempt|channel|fire|hurl|swing|thrust).*$</highlight>
-  <highlight fg='00ffff'>^.*(?:into|upon|at|in|on|to) you[!.]\s*$</highlight>
+  <highlight fg='00ffff'>^.*\b(?:into|at|in|on|to) you[!.]\s*$</highlight>
   <highlight fg='00ffff'>^.*taps you lightly on the shoulder\.$</highlight>
 
   <highlight fg='0000a0'>^(?:You offer .* Click CANCEL to prematurely cancel the offer\.|.* has accepted your offer and is now holding .*|.* has declined the offer\.|Offer cancelled\.)\s*$</highlight>
   <highlight fg='0000a0'>^(?:.*Click ACCEPT to accept the offer or DECLINE to decline it\.  The offer will expire in 30 seconds\.|You accept .* offer and are now holding.*|Offer declined\.|.* has cancelled the offer\.)\s*$</highlight>
   <highlight fg='0000a0'>^.* just gave you \d+ coins which you quickly pocket\.$</highlight>
-
 
   <highlight tags="good" fg='0000ff'>^(?:You feel fully energetic again\.|You feel at full magical power again\.|You do not feel drained anymore\.|You feel less drained\.)$</highlight>
   <highlight tags="good" fg='0000ff'>^(?:You feel recovered from your whirlwind flurry of strikes\.)$</highlight>
@@ -42,19 +40,19 @@
 
   <highlight tags='charging best' fg='006400'>^(?:You are unable to add any more charges\.|The orb is already prepared for enchanting\.|It shines brightly for a moment, flickering in color and humming tones of enchantment!)$</highlight>
   <highlight tags='charging success' fg='008000'>^(?:The .* quickly expands into a blue pulsating orb!|The orb resonates in response to each of your gestures and words\.|It grows in size!)$</highlight>
-  <highlight tags='charging warning' fg='ffff00'>^(?:The orb isn't properly prepared for recharging.\|The pulsating orb shrinks somewhat\.|You do not have enough mana\.)$</highlight>
+  <highlight tags='charging warning' fg='ffff00'>^(?:The orb isn&#39;t properly prepared for recharging.\|The pulsating orb shrinks somewhat\.|You do not have enough mana\.)$</highlight>
   <highlight tags='charging danger' fg='ff8000'>^(?:You are unable to concentrate completely\.|You are unable to properly channel the flows\.|You feel terribly drained!)$</highlight>
   <highlight tags='charging critical' fg='aa0000'>^(?:It flares a sickening green and then goes dim\.)$</highlight>
 
   <highlight tags='enchanting best' fg='006400'>^(?:Visible wisps of essence dance across the surface.*leaving behind a faint, fading aura\.)$</highlight>
   <highlight tags='enchanting success' fg='008000'>^(?:As the liquid coats the surface.*notice nothing amiss, and conclude that the tempering seems to have been successful.  You estimate that .* should be ready to enchant in about .* days\.|You examine.*though the faint glow appears to be fading rapidly, are satisfied that it is ready to take a standard tempering potion\.|The layers of essence permeating.*It is currently tempered and ready to be enchanted.*level of enchantment\.)$</highlight>
   <highlight tags='enchanting success' fg='008000'>It is currently tempered and ready to be enchanted\.</highlight>
-  <highlight tags='enchanting warning' fg='ffff00'>^(?:The liquid absorbs into .* too quickly as you fumble to begin your chant and gestures, and .* is dry in a moment's notice leaving no noticable change\.)$</highlight>
+  <highlight tags='enchanting warning' fg='ffff00'>^(?:The liquid absorbs into .* too quickly as you fumble to begin your chant and gestures, and .* is dry in a moment&#39;s notice leaving no noticable change\.)$</highlight>
   <highlight tags='enchanting warning' fg='ffff00'>It is currently tempering</highlight>
-  <highlight tags='enchanting critical' fg='aa0000'>^(?:Something doesn't seem right\.\.\.)$</highlight>
+  <highlight tags='enchanting critical' fg='aa0000'>^(?:Something doesn&#39;t seem right\.\.\.)$</highlight>
 
   <highlight tags='sorter' fg='004242'>^magic(?= \(\d+\):)</highlight>
-  <highlight tags='sorter' fg='006400'>^herb(?= \(\d+\):)</highlight>
+  <highlight tags='sorter' fg='005f00'>^herb(?= \(\d+\):)</highlight>
 
   <highlight fg='fff44f'>^Also here:</highlight>
 
@@ -72,8 +70,9 @@
   <highlight tags='best' fg='006400'>^(?:You wake from your meditation, yet a deep feeling of relaxation remains present.)$</highlight>
   <highlight tags='success' fg='008000'>^(?:You continue to meditate on recent events.)$</highlight>
 
-  <highlight tags='society col' fg='4b0082'>^(?:.*a fellow member of the Council of Light\.|[A-Z]\w+ signals, (?=".*")|Your SIGN OF .* is no longer effective\.|You sense the thoughts of the Grand Poohbah:)$</highlight>
+  <highlight tags='society col' fg='4b0082'>^(?:.*a fellow member of the Council of Light\.|\w+ signals, (?=")|Your SIGN OF .* is no longer effective\.|You sense the thoughts of the Grand Poohbah:)$</highlight>
   <highlight tags='society col' fg='4b0082'>(?i:Council of Light|Grand Poohbah)</highlight>
+  <highlight tags='society col' fg='4b0082'>^(?:\w+ signals,(?= "))</highlight>
   <highlight tags='society col' fg='4b0082'>Sign of (\w+\s?)+</highlight>
   <highlight tags='society col danger' fg='ff8000'>^(?:"My child, you have not abided by your vow of|secrecy and have permitted non-members to identify|your affiliation\.\s+As such, I strip you of your|powers for \d+ minutes, so that you might have|time to reflect upon your actions\.)$</highlight>
 
@@ -81,28 +80,36 @@
   <highlight tags='society sunfist' fg='804124'>^(?:\[you have \d+ kills remaining for your current society task\.\]|\[you have earned \d+ (?:prestige|recognition) points\.\])$</highlight>
   <highlight tags='society sunfist' fg='804124'>Sigil of (\w+\s?)+</highlight>
 
-  <highlight tags='bounty best' fg='006400'>^(?:\[You have completed this portion of your Adventurer's Guild task\.\]|You spy .*, which looks like the heirloom that you are searching for!)$</highlight>
-  <highlight tags='bounty success' fg='008000'>^\[You have \d+ kills remaining.\]$</highlight>
-  <highlight tags='bounty warning' fg='ffff00'>^(?:Out of the corner of your eye, you see .* must be the creature that you've been tasked to kill!|Out of the corner of your eye, you notice.*scurries up to you and cries, "Please help me, I wanna go home!"  This must be the child you've been sent to rescue\.)$</highlight>
-  <highlight tags='bounty danger' fg='ff8000'>^(?:A .* fearfully exclaims, "It's an ambush!"|.*bandit entered the room\.)$</highlight>
-  <highlight tags='bounty critical' fg='aa0000'>^(?:\[You have failed your current Adventurer's Guild task\.\]|You have failed in your task.  Return to the Adventurer's Guild for further instructions\.)$</highlight>
+  <highlight tags='bounty best' fg='006400'>^(?:\[You have completed this portion of your Adventurer&#39;s Guild task\.\]|You spy .*, which looks like the heirloom that you are searching for!)$</highlight>
+  <highlight tags='bounty best' fg='006400'>You may return to the Adventurer&#39;s Guild to pickup your full reward\.</highlight>
+  <highlight tags='bounty success' fg='008000'>^\[You (?:have \d+ kills remaining|need to sell \d+ more to complete your task).\]$</highlight>
+  <highlight tags='bounty warning' fg='ffff00'>^(?:Out of the corner of your eye, you see .* must be the creature that you&#39;ve been tasked to kill!|Out of the corner of your eye, you notice.*scurries up to you and cries, "Please help me, I wanna go home!"  This must be the child you&#39;ve been sent to rescue\.)$</highlight>
+  <highlight tags='bounty danger' fg='ff8000'>^(?:A .* fearfully exclaims, "It&#39;s an ambush!"|.*bandit entered the room\.)$</highlight>
+  <highlight tags='bounty critical' fg='aa0000'>^(?:\[You have failed your current Adventurer&#39;s Guild task\.\]|You have failed in your task.  Return to the Adventurer&#39;s Guild for further instructions\.)$</highlight>
 
   <highlight tags='forging best' fg='006400'>^(?:You pause and lift the still glowing .* A moment of close inspection is all you need to tell that you have done your best work this time.*|You finish your work and stand up, .* You smile as you realize that this piece is the very best that you can create\.)$</highlight>
-  <highlight tags='forging success' fg='008000'>^(?:You finish your work and .* satisfied with (?:your work|the piece you've created))\.$</highlight>
-  <highlight tags='forging warning' fg='ffff00'>^(?:Things seem to be going .* doesn't look like anything yet\.)$</highlight>
+  <highlight tags='forging success' fg='008000'>^(?:You finish your work and .* satisfied with (?:your work|the piece you&#39;ve created))\.$</highlight>
+  <highlight tags='forging warning' fg='ffff00'>^(?:Things seem to be going .* doesn&#39;t look like anything yet\.)$</highlight>
   <highlight tags='forging danger' fg='ff8000'>^(?:You decide the safest thing to do now is to re-scribe .* still large enough to hold the pattern\.)$</highlight>
-  <highlight tags='forging critical' fg='aa0000'>^(?:The steady ring of hammer .*  With a single, faulty blow of your hammer, you've totally shattered .* as you shake your head and stare in disbelief\.)$</highlight>
+  <highlight tags='forging critical' fg='aa0000'>^(?:The steady ring of hammer .*  With a single, faulty blow of your hammer, you&#39;ve totally shattered .* as you shake your head and stare in disbelief\.)$</highlight>
 
   <highlight tags='profession' fg='ffff00'>Bard</highlight>
   <highlight tags='profession' fg='ffffff'>Cleric</highlight>
   <highlight tags='profession' fg='ff00ff'>Empath</highlight>
   <highlight tags='profession' fg='ff8000'>Monk</highlight>
-  <highlight tags='profession' fg='006400'>Ranger</highlight>
+  <highlight tags='profession' fg='005f00'>Ranger</highlight>
   <highlight tags='profession' fg='804124'>Rogue</highlight>
   <highlight tags='profession' fg='808080'>Paladin</highlight>
   <highlight tags='profession' fg='ff0000'>Sorcerer</highlight>
   <highlight tags='profession' fg='0000a0'>Wizard</highlight>
   <highlight tags='profession' fg='b0bf1a'>Warrior</highlight>
+
+  <highlight tags='item' fg='004242'>\b(?i:amulet|crystal|heavy quartz orb|(?:heavy|solid) moonstone cube|small statue|wand)\b</highlight>
+  <highlight tags='item' fg='004242'>\b(?i:potion)\b</highlight>
+  <highlight tags='item' fg='004242'>\b(?i:sphere)\b</highlight>
+  <highlight tags='item' fg='e1d4c0'>\b(?i:palimpsest|paper|papyrus|parchment|scroll|vellum)\b</highlight>
+  <highlight tags='item' fg='5f5f00'>\b(?i:box|chest|coffer|strongbox|trunk)\b</highlight>
+  <highlight tags='item' fg='804124'>\b(?i:lockpick|vial|wedge)\b</highlight>
 
   <highlight tags='color' fg='808080'>\b(?i:gr[ea]y(?:ish)?)\b</highlight>
   <highlight tags='color' fg='808080'>\b(?i:platinum|silver(?:s|y|ish)?)\b</highlight>
@@ -120,7 +127,8 @@
   <highlight tags='color' fg='0000ff'>\b(?i:blue|cerulean|cobalt|dragonsbreath)\b</highlight>
   <highlight tags='color' fg='0000a0'>\b(?i:indigo)\b</highlight>
   <highlight tags='color' fg='0000ff'>\b(?i:waters?|lake|river|stream|creek|ocean)\b</highlight>
-  <highlight tags='color' fg='ff8000'>\b(?i:dragonfire|drake|fiery|fires?|firestones?|flam(?:es|e|ing)|orange)\b</highlight>
+  <highlight tags='color' fg='ff8000'>\b(?i:dragonfire|drake|fiery|firestones?|flam(?:es|e|ing)|orange)\b</highlight>
+  <highlight tags='color' fg='ff8000'>(?&#60;!^You )\b(?i:fire)\b</highlight>
   <highlight tags='color' fg='00ffff'>\b(?i:aqua(?:marine)?|azure|cyan)\b</highlight>
   <highlight tags='color' fg='00ffff'>\b(?i:ic(?:e|y|ed)|lightning(?: bolts?)?)\b</highlight>
   <highlight tags='color' fg='00ffff'>\b(?i:ic(?:e|y|ed)|lightning(?: bolts?)?)\b</highlight>
@@ -135,30 +143,23 @@
   <highlight tags='color' fg='804124'>\b(?i:amber)\b</highlight>
   <highlight tags='color' fg='ffffff'>\b(?i:air|cloud(?:ed|y)|diamonds?|white)\b</highlight>
   <highlight tags='color' fg='e1d4c0'>\b(?i:bone|ivory)\b</highlight>
-  <highlight tags='color' fg='ff0000'>\b(?i:r(?=ainbow))</highlight>
-  <highlight tags='color' fg='ff8000'>(?i:(?&#60;=r)a(?=inbow))</highlight>
-  <highlight tags='color' fg='ffff00'>(?i:(?&#60;=ra)i(?=nbow))</highlight>
-  <highlight tags='color' fg='008000'>(?i:(?&#60;=rai)n(?=bow))</highlight>
-  <highlight tags='color' fg='0000ff'>(?i:(?&#60;=rain)b(?=ow))</highlight>
-  <highlight tags='color' fg='0000a0'>(?i:(?&#60;=rainb)o(?=w))</highlight>
-  <highlight tags='color' fg='800080'>(?i:(?&#60;=rainbo)w)</highlight>
+  <highlight tags='color' fg='ff0000'>(?i:\br(?=ainbow\b))</highlight>
+  <highlight tags='color' fg='ff8000'>(?i:(?&#60;=\br)a(?=inbow\b))</highlight>
+  <highlight tags='color' fg='ffff00'>(?i:(?&#60;=\bra)i(?=nbow\b))</highlight>
+  <highlight tags='color' fg='008000'>(?i:(?&#60;=\brai)n(?=bow\b))</highlight>
+  <highlight tags='color' fg='0000ff'>(?i:(?&#60;=\brain)b(?=ow\b))</highlight>
+  <highlight tags='color' fg='0000a0'>(?i:(?&#60;=\brainb)o(?=w\b))</highlight>
+  <highlight tags='color' fg='800080'>(?i:(?&#60;=\brainbo)w\b)</highlight>
 
-  <highlight tags='item' fg='004242'>\b(?i:amulet|crystal|heavy quartz orb|(?:heavy|solid) moonstone cube|small statue|wand)\b</highlight>
-  <highlight tags='item' fg='004242'>\b(?i:potion)\b</highlight>
-  <highlight tags='item' fg='004242'>\b(?i:sphere)\b</highlight>
-  <highlight tags='item' fg='e1d4c0'>\b(?i:palimpsest|paper|papyrus|parchment|scroll|vellum)\b</highlight>
-  <highlight tags='item' fg='70391f'>\b(?i:box|chest|coffer|strongbox|trunk)\b</highlight>
-  <highlight tags='item' fg='804124'>\b(?i:lockpick|vial|wedge)\b</highlight>
-
-  <highlight tags='name self' fg='00ffff'>\b(?i:Brikus|brik|Timov)\b</highlight>
-  <highlight tags='name self' fg='00ffff'>\b(?i:Kragdruk|Kaeredwyn|Brumarok)\b</highlight>
+  <highlight tags='name self' fg='00ffff'>\b(?i:Brikus|brik|Timov)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name self' fg='00ffff'>\b(?i:Kragdruk|Kaeredwyn|Brumarok)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name self' fg='00ffff'>\b(?:Krag|Bru|Brum|Kaer)\b</highlight>
-  <highlight tags='name self' fg='00ffff'>\b(?i:Soulard|Choutou|Euclide|Welston)\b</highlight>
-  <highlight tags='name self' fg='00ffff'>\b(?i:Marhand)\b</highlight>
+  <highlight tags='name self' fg='00ffff'>\b(?i:Soulard|Choutou|Euclide|Welston)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name self' fg='00ffff'>\b(?i:Marhand)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name self' fg='00ffff'>\b(?:Mar)\b</highlight>
-  <highlight tags='name self' fg='00ffff'>\b(?i:Reodin|Tansoon)\b</highlight>
+  <highlight tags='name self' fg='00ffff'>\b(?i:Reodin|Tansoon)\b(?! was not found in Elanthia)</highlight>
 
-  <highlight tags='muted' fg='141414'>^.*was not found in Elanthia. \(\w+\)\s*$</highlight>
+  <highlight tags='squelched' fg='141414'>^.*was not found in Elanthia. \(\w+\)\s*$</highlight>
 
   <preset id='whisper' fg='00ffff'/>
   <preset id='speech' fg='66ff66'/>
@@ -181,8 +182,8 @@
   <key id='win_backspace' action='cursor_backspace'/>
   <key id='delete' action='cursor_delete'/>
   <key id='tab' action='switch_current_window'/>
-  <key id='alt+page_up' action='scroll_current_window_up_one'/>
-  <key id='alt+page_down' action='scroll_current_window_down_one'/>
+  <key id='ctrl+page_up' action='scroll_current_window_up_one'/>
+  <key id='ctrl+page_down' action='scroll_current_window_down_one'/>
   <key id='page_up' action='scroll_current_window_up_page'/>
   <key id='page_down' action='scroll_current_window_down_page'/>
   <key id='up' action='previous_command'/>
@@ -195,6 +196,19 @@
   <key id='ctrl+g' macro='\xremove my buckler\r'/>
   <key id='ctrl+p' macro='\xwear my buckler\r'/>
   <key id='ctrl+f' macro='\xtell familiar to '/>
+  <key id='alt+b' macro='\xgetfrom backpack '/>
+  <key id='ctrl+b' macro='\xputin backpack '/>
+  <key id='f1' macro='\x;eq fput "look in #{UserVars.lootsack || "backpack"}"\r'/>
+  <key id='f2' macro='\x;eq fput "look in #{UserVars.lootsack2 || "sack"}"\r'/>
+  <key id='f3' macro='\x;eq fput "look in #{UserVars.lootsack3 || "vest"}"\r'/>
+  <key id='f4' macro='\x;eq fput "look in #{UserVars.cloak || "cloak"}"\r'/>
+  <key id='f5' macro='\x;eq fput "look in #{UserVars.herbsack || "pouch"}"\r'/>
+  <key id='f6' macro='\x;eq fput "look in satchel"\r'/>
+  <key id='f8' macro='\x;eq fput "look in sack"\r'/>
+  <key id='f9' macro='\x;eq fput "look in harness"\r'/>
+  <key id='f10' macro='\xlook in '/>
+  <key id='f11' macro='\xlook in '/>
+  <key id='f12' macro='\xlook in '/>
   <layout id='default'>
     <window class='text' top='6' left='12' width='cols-12' height='lines-7' value='main' buffer-size='2000' />
     <window class='text' top='0' left='0' height='6' width='cols' value='lnet,thoughts,voln' buffer-size='1000' />
