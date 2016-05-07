@@ -8,9 +8,9 @@
   <highlight tags='chat' fg='008000'>^\[code\]</highlight>
   <highlight tags='chat' fg='808000'>^\[Prime\]</highlight>
   <highlight tags='chat' fg='008000'>^\[Merchant\]</highlight>
-  <highlight tags='chat' fg='ffffff'>^\[Private(?:To)?\]</highlight>
-  <highlight tags='chat' fg='fff44f'>^\[server\]</highlight>
-  <highlight tags='chat' fg='ffffff'>\]-You: ".*$</highlight>
+  <highlight tags='chat' fg='fff44f'>^\[Private(?:To)?\]</highlight>
+  <highlight tags='chat' fg='ffffff'>^\[server\]</highlight>
+  <highlight tags='chat' fg='00ffff'>\]-You: ".*$</highlight>
   <highlight fg='008000'>^--- Lich:.*</highlight>
   <highlight fg='565656'>\((?:calmed|dead|flying|hiding|kneeling|prone|sitting|sleeping|stunned|webbed)\)</highlight>
   <highlight fg='ff0000'>(?&#60;=(?:a) )(?:calmed|dead|flying|hiding|kneeling|prone|sitting|sleeping|stunned|webbed)(?= [A-Z])</highlight>
