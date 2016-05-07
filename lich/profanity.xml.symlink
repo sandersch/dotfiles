@@ -177,7 +177,9 @@
   <preset id='thoughts' bg='001a00'/>
   <preset id='voln' bg='001a00'/>
   <key id='alt'>
-    <key id='f' macro='something'/>
+    <key id='a' macro='\x;e Ranged.fire\r'/>
+    <key id='b' macro='\xgetfrom backpack '/>
+    <key id='up' action='send_second_last_command'/>
   </key>
   <key id='enter' action='send_command'/>
   <key id='left' action='cursor_left'/>
@@ -204,8 +206,8 @@
   <key id='ctrl+g' macro='\xremove my buckler\r'/>
   <key id='ctrl+p' macro='\xwear my buckler\r'/>
   <key id='ctrl+f' macro='\xtell familiar to '/>
-  <key id='alt+b' macro='\xgetfrom backpack '/>
   <key id='ctrl+b' macro='\xputin backpack '/>
+  <key id='ctrl+a' macro='\x;e Ranged.gather\r'/>
   <key id='f1' macro='\x;eq fput "look in #{UserVars.lootsack || "backpack"}"\r'/>
   <key id='f2' macro='\x;eq fput "look in #{UserVars.lootsack2 || "sack"}"\r'/>
   <key id='f3' macro='\x;eq fput "look in #{UserVars.lootsack3 || "vest"}"\r'/>
