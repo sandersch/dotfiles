@@ -221,8 +221,8 @@
   <key id='f12' macro='\xlook in '/>
   <layout id='default'>
     <window class='text' top='6' left='12' width='cols-12' height='lines-7' value='main' buffer-size='2000' />
-    <window class='text' top='0' left='0' height='6' width='cols' value='lnet,thoughts,voln' buffer-size='1000' />
-    <window class='text' top='6' left='0' width='11' height='lines-34' value='death,logons' buffer-size='500' />
+    <window class='text' top='0' left='12' width='cols-12' height='6' value='lnet,thoughts,voln' buffer-size='1000' />
+    <window class='text' top='0' left='0' width='11' height='lines-28' value='death,logons' buffer-size='500' />
 
     <window class='indicator' top='lines-27' left='0' height='1' width='11' value='right' fg='444444,ffffff'/>
     <window class='indicator' top='lines-26' left='0' height='1' width='11' value='left' fg='444444,ffffff'/>
