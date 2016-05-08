@@ -14,6 +14,7 @@ Abolish preform{,ance,s} perform{}
 Abolish receve{,d,r,s} receive{}
 Abolish recieve{,d,r,s} receive{}
 Abolish recive{,d,r,s} receive{}
+Abolish reponse response
 Abolish wrt with regard to
 
 augroup markdown
