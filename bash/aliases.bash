@@ -80,3 +80,8 @@ fi
 for FILE in ~/dotfiles/*/aliases.sh; do
   source $FILE
 done
+
+#### GEMSTONE STUFF ####
+alias countenv='\grep -h "^You unwrap the papyrus envelope and toss it away" ~/lich/logs/GSIV-*/`date +%Y`-* | wc -l'
+alias envresults='\grep -h -A1 "^You unwrap the papyrus envelope and toss it away" ~/lich/logs/GSIV-*/`date +%Y`-* | sort | uniq'
+alias lorelog='tail -n100 -f `ls -ahrtc ~/lich/logs/GSIV-Jovalon/loresing-* | tail -n1`'
