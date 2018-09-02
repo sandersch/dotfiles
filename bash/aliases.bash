@@ -51,6 +51,9 @@ alias filestamp='date +%Y%m%dT%H%M%S' # iso8601, avoid special chars
 alias exactfilestamp='date +%Y-%m-%d_%H-%M-%S.%N' # include nanoseconds to minimize collisions
 alias unixtime='date +%s' # seconds since unix epoch
 
+alias uuid='uuidgen'
+alias cleanuuid='uuidgen | tr -d -'
+
 # Fully update operating system
 if [ -f /etc/debian_version ]; then
   alias update_system="sudo bash -c 'apt-get -y update && apt-get -y upgrade && apt-get -y dist-upgrade && apt-get -y autoremove'"
