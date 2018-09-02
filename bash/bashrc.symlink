@@ -64,3 +64,6 @@ if [[ -n "$PS1" ]]; then
         . ~/.keychain/$HOSTNAME-sh
     fi
 fi # [[ -n "$PS1" ]]
+
+# added by travis gem
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
