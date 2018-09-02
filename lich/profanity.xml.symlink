@@ -2,7 +2,7 @@
   <highlight fg='9090ff'>^(?:You gesture(?! at)|You intone a phrase of elemental power|You recite a series of mystical phrases|You trace a series of glowing runes|Your hands glow with power as you invoke|You trace a simple rune while intoning|You trace a sign while petitioning the spirits|You trace an intricate sign that contorts in the air).*$</highlight>
   <highlight fg='9090ff'>^(?:Cast Roundtime 3 Seconds\.|Your spell is ready\.)$</highlight>
   <highlight tags='roundtime' fg='ffffff'>(?&#60;=^Roundtime: )\d+(?= sec.$)</highlight>
-  <highlight fg='88aaff'>([A-Z][a-z]+ disk)</highlight>
+  <highlight fg='88aaff'>[A-Z][a-z]+ disk\b</highlight>
   <highlight tags="lich muted" fg='555555'>^\[.*?\](?:>|&gt;).*$</highlight>
   <highlight tags="lich muted" fg='555555'>\([0-9][0-9]\:[0-9][0-9]\:[0-9][0-9]\)$</highlight>
   <highlight tags='chat' fg='0000ff'>^\[LNet\]</highlight>
@@ -23,7 +23,7 @@
   <highlight fg='aa0000'>^.* throws (?:his|her) arms skyward!$|(?:swirling )black void|(?:Dozens of flaming meteors light the sky nearby!|Several flaming meteors light the nearby sky!|Several flaming rocks burst from the sky and smite the area!|A low roar of quickly parting air can be heard above!)</highlight>
   <highlight fg='ffffff death notice'>^.*(?:falls slack against the floor|falls slack against the ground|falls to the floor, motionless|falls to the ground dead|falls to the ground motionless|and dies|and lies still|goes still|going still|crashes to the ground, motionless|falls to the ground in a lifeless mass of flesh and fractured bones|dissolving on the air as the last cloudy tendrils vanish|shudders a final time|goes limp and falls over|falls to the floor dead|but the effort drains the last|body goes stiff and cold|crumples to the floor motionless|crashes to the floor in a plume of dust|slumps to the ground|living fire extinguished|falls over as the fire slowly fades|curls up into a ball, dead|collapses into a lifeless heap|eyes slowly fades|one last time and expires|collapses to the floor, dead|collapses into a lifeless heap|slams to the floor, dead).*$</highlight>
   <highlight fg='ffffff'>^[^A-Z].* is stunned!$|^You come out of hiding\.$</highlight>
-  <highlight fg='ffaaaa'>^\s*[A-Z]\w+ is stunned!$</highlight>
+  <highlight fg='ffff00'>^\s*[A-Z]\w+ is stunned!$</highlight>
   <highlight fg='ffaaaa'>.*ruining your hiding place\.$|^You are no longer hidden\.$|^\s*You are (?:stunned|knocked to the ground).*|^You are unable to remain hidden!$|^You are visible again\.$|^You fade into sight\.$|^You fade into view.*|^You feel drained!$|^You have overextended yourself!$|^You feel yourself going into shock!$</highlight>
   <highlight tags='notice' fg='ffffff'>.* designates you as the new leader of the group\.$</highlight>
   <highlight tags='notice gem' fg='ffffff'>^The .* (?:jar|bottle|beaker) is full!$</highlight>
@@ -77,6 +77,15 @@
   <highlight tags='charging danger' fg='ff8000'>^(?:You are unable to concentrate completely\.|You are unable to properly channel the flows\.|You feel terribly drained!)$</highlight>
   <highlight tags='charging critical' fg='aa0000'>^(?:It flares a sickening green and then goes dim\.)$</highlight>
 
+  <highlight tags='clericgem best' fg='005f00'>^You feel that you have successfully placed.*</highlight>
+  <highlight tags='clericgem success' fg='008000'>^You manage to successfully place.*</highlight>
+  <highlight tags='clericgem failure' fg='ff8000'>^Something goes wrong with the process and you feel your power rush away from you\.</highlight>
+  <highlight tags='clericgem critical' fg='aa0000'>^The .* you are holding explodes with a bright flash!.*</highlight>
+
+  <highlight tags='chrism best' fg='005f00'>^You chant a quick prayer, and the .* outer shell becomes translucent and brittle.  A cobalt liquid fills the once-solid interior of the .*$</highlight>
+  <highlight tags='chrism failure' fg='ff8000'>^You are not spiritually prepared to bless a spell into the gem.$</highlight>
+  <highlight tags='chrism critical' fg='aa0000'>^You chant a quick prayer, and the .* becomes entirely too brittle in your hand, cracks, and blows away in the form of a fine powder.$</highlight>
+
   <highlight tags='loresing notice' fg='ffffff'>(?&#60;=From the pitch of the vibration you determine that the purpose of the) .*$</highlight>
   <highlight tags='loresing notice' fg='ffffff'>^This is a small item, under a pound\.</highlight>
   <highlight tags='loresing notice' fg='ffffff'>(?&#60;=is the weight, which is about )\d+ pounds\.</highlight>
@@ -89,6 +98,12 @@
   <highlight tags='loresing best blank-rechargeable' fg='005f00'>You also feel a faint drawing sensation from it, as though (?:it may be able to hold more power|when its charge is depleted, it may be refilled)\.</highlight>
   <highlight tags='loresing muted' fg='333333'>^You feel that you have reached the end of the .* song\.$</highlight>
 
+  <highlight tags='reim notice' fg='00ff00'>(?&#60;=^\[group: )Number of group members: (\d+) of \1 PCs in room\.</highlight>
+  <highlight tags='reim notice' fg='ffff00'>(?&#60;=^\[group: Number of group members:) \d+ (?=of \d+ PCs in room\.\]$)</highlight>
+  <highlight tags='reim notice' fg='ff0000'>(?&#60;=^\[group: )Number of group members: (\d+) (?!of \1 PCs).*</highlight>
+  <highlight tags='reim notice' fg='ffff00'>(?&#60;=^\[group: )Ungrouped members:</highlight>
+  <highlight tags='reim notice' fg='ffff00'>\d+ (?=PCs in room\.\]$)</highlight>
+
   <highlight tags='puregem best orb' fg='005f00'>.* begins to twist and turn as the very essence flows into it filling the imperfections\.$</highlight>
   <highlight tags='puregem best orb' fg='005f00'>^As the gem resonates in response to your voice, you sense that it cannot be purified any further.</highlight>
   <highlight tags='puregem success' fg='008000'>.*, its crystalline structure reforming as the gem becomes more perfect\.$</highlight>
@@ -98,6 +113,11 @@
   <highlight tags='puregem critical' fg='aa0000'>.* to shatter into thousands of fragments!$</highlight>
   <highlight tags='puregem charging highalert' fg='ffff00' bg='ff000'>It pulses strongly with the rhythm of your words.</highlight>
 
+  <highlight tags='alert' fg='00ff00'>\bMajor Loot Boost\b</highlight>
+
+  <highlight tags='deed' fg='005f00'>.*Thy offering pleases the Goddess and thy deed has been.*</highlight>
+
+  <highlight tags='alert' fg='ffff00'>.*Boost has ended\.\]$</highlight>
   <highlight tags='alert' fg='ffff00'>.* resists the effects of your magic!$</highlight>
   <highlight tags='notice' fg='ffffff'>^You sense that the .* is a magic item with .*</highlight>
   <highlight tags='notice enhancive' fg='ffffff'>^You sense that the .* has enhancive properties.*</highlight>
@@ -114,6 +134,11 @@
   <highlight tags='enchanting alert' fg='ffff00'>It is currently tempering</highlight>
   <highlight tags='enchanting critical' fg='aa0000'>^(?:Something doesn&#39;t seem right\.\.\.)$</highlight>
 
+  <highlight tags='enchanting pool best' fg='aa0000'>^You have reached the maximum \(10,000\) mana points allowed in your weekly mana pool accumulation</highlight>
+  <highlight tags='enchanting pool critical' fg='aa0000'>.* that can be stored in a personal mana pool!  Go enchant something!$</highlight>
+  <highlight tags='enchanting pool notice' fg='ffffff'>(?&#60;=have a total of) \d+ (?=mana points stored in your personal mana pool\.$)</highlight>
+  <highlight tags='enchanting pool alert' fg='ffff00'>(?&#60;=^You have) \d+ (?=mana points in your weekly mana pool accumulation limit)</highlight>
+
   <highlight tags='sorter' fg='005f5f'>^magic(?= \(\d+\):)</highlight>
   <highlight tags='sorter' fg='005f00'>^herb(?= \(\d+\):)</highlight>
 
@@ -126,7 +151,7 @@
   <highlight tags='merchant notice' fg='ffff00'>(?&#60;=^A huckster begins to spin the ticket barrel.  After a moment, he stops it and pulls out a ticket.  He examines it for a moment then announces, "The winner is) .*</highlight>
   <highlight tags='merchant' fg='005f00'>^.*comes to a stop pointing directly at you!$</highlight>
 
-  <highlight tags='critical' fg='aa0000'>(?:billowing shadowy cloud|swirling black void|sticky web|whirling sandstorm)</highlight>
+  <highlight tags='critical' fg='aa0000'>(?:billowing shadowy cloud|swirling black void|sticky web|whirling sandstorm|a gas cloud)</highlight>
   <highlight tags='critical' fg='aa0000'>^(?:A .* rifles through your gear!  Somebody call a constable!|Your .* is struck with .* cast\.|Violent winds tighten around you\.)$</highlight>
 
   <highlight tags='danger' fg='ff8000'>(?:burning web)</highlight>
@@ -163,7 +188,7 @@
   <highlight tags='bounty success' fg='008000'>^\[You (?:have \d+ kills remaining|need to sell \d+ more to complete your task).\]$</highlight>
   <highlight tags='bounty alert' fg='ffff00'>^(?:Out of the corner of your eye, you see .* must be the creature that you&#39;ve been tasked to kill!|Out of the corner of your eye, you notice.*scurries up to you and cries, "Please help me, I wanna go home!"  This must be the child you&#39;ve been sent to rescue\.)$</highlight>
   <highlight tags='bounty danger' fg='ff8000'>^(?:A .* fearfully exclaims, "It&#39;s an ambush!"|.*bandit entered the room\.|.*leaps out of \w+ hiding place!)$</highlight>
-  <highlight tags='bounty alert' fg='ffff00'>grizzled</highlight>
+  <highlight tags='bounty alert' fg='ffff00'>grizzled (?!old warrior|dusky curhound)</highlight>
   <highlight tags='bounty alert' fg='ffff00'>^\[banditcounter: detected.*</highlight>
   <highlight tags='bounty success' fg='008000'>^\[banditcounter: cleared\]$</highlight>
   <highlight tags='bounty danger' fg='aa0000'>^.*(?:suddenly jumps out of the shadows!).*$</highlight>
@@ -185,7 +210,7 @@
   <highlight tags='profession' fg='ff00ff'>\bEmpath(?:ic)?\b</highlight>
   <highlight tags='profession' fg='ff00ff'>\b(?i:heal(?:ers?|ing?|s)?)\b</highlight>
   <highlight tags='profession' fg='ff8000'>\bMonk\b</highlight>
-  <highlight tags='profession' fg='005f00'>\bRanger|RANGER\b</highlight>
+  <highlight tags='profession' fg='005f00'>\b(?:Ranger|RANGER)\b</highlight>
   <highlight tags='profession' fg='804124'>\bRogue\b</highlight>
   <highlight tags='profession' fg='808080'>\bPaladin\b</highlight>
   <highlight tags='profession' fg='ff0000'>\bSorcerer\b</highlight>
@@ -255,14 +280,15 @@
   <highlight tags='name self' fg='00ffff'>\b(?i:Marhand|Wyrmpoint)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name self' fg='00ffff'>\b(?:Mar)\b</highlight>
   <highlight tags='name self' fg='00ffff'>\b(?i:Reodin|Tansoon)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name friend hoa' fg='005f00'>\b(?i:Treeva)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friend siierra' fg='005f00'>\b(?i:Siierra|Kayliegh|Kinsley|Emelyia)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name friend reim simucon' fg='005f00'>\b(?i:Melivn|Tigerwolf)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name friend melivn' fg='005f00'>\b(?i:Melivn|Tigerwolf|Ktovashy)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friend ragz' fg='005f00'>\b(?i:Ragz|Morgahan)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friend jon' fg='005f00'>\b(?i:Spenster|Olrick)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friend blanks' fg='005f00'>\b(?i:Tservin|Blanks|Raewynn)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friend jason' fg='005f00'>\b(?i:Rencelas)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name friend simucon' fg='005f00'>\b(?i:Fromer|Kilthal|Calael)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name friendly simucon' fg='008000'>\b(?i:Maylan|Naamit|Rolfard|Subarashi)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name friend simucon' fg='005f00'>\b(?i:Alasatia|Calael|Cigger|Fromer|Kilthal)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name friendly simucon' fg='008000'>\b(?i:Deza|Maylan|Naamit|Nairdin|Rolfard|Rozy|Subarashi)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friendly simucon landing' fg='008000'>\b(?i:Cruxophim|Seomanthe)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name known simucon' fg='005f5f'>\b(?i:Tool|Bombero|Chopad)\b</highlight>
   <highlight tags='name friendly' fg='008000'>\b(?i:Aurach|Jemiquist|Archales)\b(?! was not found in Elanthia)</highlight>
@@ -270,19 +296,21 @@
   <highlight tags='name friendly whirlin' fg='005f00'>\b(?i:Whirlin|Oceaniania|Jyinaeir|Thaeren)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friend durakar' fg='005f00'>\b(?i:Durakar|Yarrious)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friend ondreian' fg='005f00'>\b(?i:Ondreian)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name friend tysong' fg='005f00'>\b(?i:Tysong)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name friend tysong' fg='005f00'>\b(?i:Tysong|Rasko|Gharr)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friendly nuadjha' fg='008000'>\b(?i:Nuadjha|Arkios)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name friendly bandits' fg='008000'>\b(?i:Cigger|Diablic|Githros|Jooniper|Myasarie|Nevik|Silversi|Taedon|Tylanthriel|Martieln)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name friendly bandits' fg='008000'>\b(?i:Diablic|Githros|Jooniper|Myasarie|Nevik|Silversi|Taedon|Tylanthriel|Martieln)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friendly illistim' fg='008000'>\b(?i:Heartfire|Luxelle)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name friendly reim' fg='008000'>\b(?i:Nuadjha|Stormyrain|Wolfstarr|Ylandra)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name friendly reim' fg='008000'>\b(?i:Nodyre|Nuadjha|Stormyrain|Wolfstarr|Ylandra)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name friendly reim jia' fg='008000'>\b(?i:Jiarine|Linsha)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name known' fg='005f5f'>\b(?i:Varucca)\b</highlight>
   <highlight tags='name known' fg='005f5f'>\b(?i:Sacru|Telum)\b</highlight>
+  <highlight tags='name known maetriks' fg='005f5f'>\b(?i:Maetriks|Marcelina|Nihrvanah|Daheus)\b</highlight>
   <highlight tags='name known vaalor' fg='400000'>\b(?i:First|High|Squire)? Legionnaire\b</highlight>
-  <highlight tags='name known vaalor' fg='005f5f'>\b(?i:Esana|Gellert|Kakoon|Menos|Nihrvanah)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name known reim' fg='005f5f'>\b(?i:Maetriks|Crime|Jeril|Shinanigans|Jiarine|Nairdin|Leifa|Alasatia|Fyrentennimar)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name known alastir' fg='005f5f'>\b(?i:Alastir)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name known vaalor' fg='005f5f'>\b(?i:Esana|Gellert|Kakoon|Menos)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name known reim' fg='005f5f'>\b(?i:Crime|Jeril|Shinanigans|Leifa|Fyrentennimar)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name known alastir' fg='005f5f'>\b(?i:Alastir|Spoilz|Erykk)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name known arshwikk' fg='005f5f'>\b(?i:Arshwikk|Folksinger|Hiawathah|Kinjaro)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name known reim' fg='005f5f'>\b(?i:Ewin|Xred|Zyllian|Treeva|Claudaro|Falvicar|Enestrie)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name known reim' fg='005f5f'>\b(?i:Ewin|Xred|Zyllian|Claudaro|Falvicar|Enestrie|Sorrenn|Daedeus|Hammibal)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name known landing' fg='005f5f'>\b(?i:Cryheart|Dergoatean|Raelee|Katiesa|Madmountan|Puptilian|Hoodtralfeck|Iekid)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name known' fg='005f5f'>\b(?i:Japhrimel|Roblar|Vishra)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name known hoy' fg='005f5f'>\b(?i:Yakushi|Hoy|Neimanz)\b</highlight>
@@ -292,10 +320,11 @@
   <highlight tags='name npc storyline' fg='d2bc2a'>\b(?i:Murstyr|Qalinor|Jaranzair)\b</highlight>
   <highlight tags='name npc storyline teras' fg='d2bc2a'>\b(?i:Eldalina)\b</highlight>
 
-  <highlight tags='name npc merchant' fg='00a0ff'>\b(?:Bazzelwyn|Favretto|Glearnim|Haleen|Ledirth|Jellybeard|Ravias|Xerria|Felthrop|Weffinait|Kylistra|Tysiri|Evlissa|Caelyna|Jensun|Seskel|Otuio|Clefford|Tanki|Arastir|Eosten|Lythwen|Gasen|Irelain)\b</highlight>
+  <highlight tags='name npc merchant' fg='00a0ff'>\b(?:Bazzelwyn|Favretto|Glearnim|Haleen|Ledirth|Jellybeard|Ravias|Xerria|Felthrop|Weffinait|Kylistra|Tysiri|Evlissa|Caelyna|Jensun|Seskel|Otuio|Clefford|Tanki|Arastir|Eosten|Lythwen|Gasen|Irelain|Naughtbrite)\b</highlight>
   <highlight tags='name npc merchant ebongate' fg='00a0ff'>\b(?:Airisu|Bartoldt|Beitris|Binklar|Boring|Druena|Duplicity|Edero|Fana|Farain|Genose|Gizwizit|Ghlum|Goblyn|Goldilynn|Ielisha|Ilixil|Indres|Jiddie|Kyrinthe|Laulu|Maescia|Pelil|Philonar|Phrolo|Rikelle|Rikelle|Rumdotter|Sauli|Strella|Taeliryn|Twiddley)\b</highlight>
   <highlight tags='name npc merchant ebongate 2017' fg='00a0ff'>\b(?:Ahriel|Aneela|Aslyrion|Bimbibick|Chelise|Damp|Dipideedoo|Drezda|Elsia|Frazzelwyn|Gunkweeler|Hibis|Ianthra|Marent|Mhad|Nimaya|Ohshean|Oirisu|Phey|Saryen|Sylvere|Taionia|Tholok|Tufeetti|Upsy|Vanetti|Varilora|Yarimore|Zenlia|Zylder)\b</highlight>
   <highlight tags='name npc merchant duskruin' fg='00a0ff'>\b(?:Lahke|Culd|Shahno|Selandrine|Siduine)\b</highlight>
+  <highlight tags='name npc merchant ccf-2018' fg='00a0ff'>\b(?:Aepoch|Aneela|Baroqe|Bliza|Blusteri|Davro|Dett|Olba|Rashiva|Yriwyn)\b</highlight>
 
   <highlight tags='boora shady' fg='ff0000'>\b(?i:Boora|Sazarr|Baeleron|Rydgel)\b</highlight>
   <highlight tags='wrathbringer shady' fg='ff0000'>\b(?i:Locrean)\b</highlight>
@@ -320,7 +349,8 @@
   <highlight tags='reim alert' fg='ffff00'>(?&#60;=There are) \d+(?= denizens? remaining in this wave!$)</highlight>
   <highlight tags='reim alert' fg='ffff00'>(?&#60;=There is) \d+(?= denizens? remaining in this wave!$)</highlight>
   <highlight tags='bless alert' fg='ffff00'>^Your .* returns to normal\.$</highlight>
-  <highlight tags='bless alert' fg='ffff00'>.* but your attack has no effect!$</highlight>
+  <highlight tags='bless alert' fg='ffff00'>^You .* but your attack has no effect!$</highlight>
+  <highlight tags='bless alert' fg='ffff00'>^[A-Z].* but it has no effect!$</highlight>
   <highlight tags='sanct alert' fg='ffff00'>^You can't do that while singing Song of Peace\.$</highlight>
   <highlight tags='902 alert' fg='ffff00'>^Your .* stop glowing\.$</highlight>
 
@@ -484,7 +514,7 @@
     <window class='text' top='11' left='12' width='cols-12' height='lines-12' value='main' buffer-size='2000' />
     <window class='text' top='0' left='0' width='11' height='lines-28' value='death,logons' buffer-size='500' />
     <window class='text' top='0' left='12' width='cols-12' height='6' value='lnet,thoughts,voln' buffer-size='1000' />
-    <window class='text' top='6' left='12' width='cols-12' height='5' value='familiar,speech' bg='ffffff' buffer-size='1000' />
+    <window class='text' top='6' left='12' width='cols-12' height='5' value='familiar,speech' buffer-size='1000' />
 
     <window class='indicator' top='lines-27' left='0' height='1' width='11' value='right' fg='444444,ffffff'/>
     <window class='indicator' top='lines-26' left='0' height='1' width='11' value='left' fg='444444,ffffff'/>
