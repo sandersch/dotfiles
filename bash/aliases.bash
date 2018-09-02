@@ -54,6 +54,11 @@ alias unixtime='date +%s' # seconds since unix epoch
 alias uuid='uuidgen'
 alias cleanuuid='uuidgen | tr -d -'
 
+set_term_title(){
+  echo -en "\033]0;$1\a"
+  echo -en "\033]30;$1\a"
+}
+
 # Fully update operating system
 if [ -f /etc/debian_version ]; then
   alias update_system="sudo bash -c 'apt-get -y update && apt-get -y upgrade && apt-get -y dist-upgrade && apt-get -y autoremove'"
