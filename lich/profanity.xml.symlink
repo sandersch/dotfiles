@@ -28,6 +28,7 @@
   <highlight tags='notice' fg='ffffff'>.* designates you as the new leader of the group\.$</highlight>
   <highlight tags='notice gem' fg='ffffff'>^The .* (?:jar|bottle|beaker) is full!$</highlight>
   <highlight tags='notice flare' fg='ffffff'>.* glows intensely with a verdant light!$</highlight>
+  <highlight tags='disarm curse highalert' fg='ffff00' bg='ff000'>An uncontrollable urge to scratch the rash covering your body overcomes you, and you madly dig at it with your fingernails!</highlight>
 
   <highlight fg='ffff00'>(?:GameMaster|GameHost)</highlight>
   <highlight fg='ffff00'>SEND\[</highlight>
@@ -68,6 +69,7 @@
   <highlight tags='otf alert' fg='ffff00'>.* fades into view!$</highlight>
   <highlight tags='otf critical' fg='aa0000'>^(?:Within moments you find yourself soaring over the ground far below!)$</highlight>
   <highlight tags='otf critical' fg='aa0000'>.* rifles through your gear!\s+Somebody call a constable!$</highlight>
+  <highlight tags='otf critical' fg='aa0000'>^Your .* is knocked to the ground!$</highlight>
   <highlight tags='otf danger' fg='ff8000'>^(?:Just as the \w+ begins to surge upward, it suddenly loses its grip and lets you plummet toward the ground!)$</highlight>
   <highlight tags='otf warning' fg='ff0000'>^(?:.* hooks its claws into you!  With a great flap of its wings .* carries you into the air!|You try, but the terrifying flight to certain death takes precedence.  Accept your fate\.)$</highlight>
 
@@ -134,7 +136,7 @@
   <highlight tags='enchanting alert' fg='ffff00'>It is currently tempering</highlight>
   <highlight tags='enchanting critical' fg='aa0000'>^(?:Something doesn&#39;t seem right\.\.\.)$</highlight>
 
-  <highlight tags='enchanting pool best' fg='aa0000'>^You have reached the maximum \(10,000\) mana points allowed in your weekly mana pool accumulation</highlight>
+  <highlight tags='enchanting pool best' fg='005f00'>^You have reached the maximum \(10,000\) mana points allowed in your weekly mana pool accumulation</highlight>
   <highlight tags='enchanting pool critical' fg='aa0000'>.* that can be stored in a personal mana pool!  Go enchant something!$</highlight>
   <highlight tags='enchanting pool notice' fg='ffffff'>(?&#60;=have a total of) \d+ (?=mana points stored in your personal mana pool\.$)</highlight>
   <highlight tags='enchanting pool alert' fg='ffff00'>(?&#60;=^You have) \d+ (?=mana points in your weekly mana pool accumulation limit)</highlight>
@@ -238,6 +240,7 @@
   <highlight tags='color' fg='005f00'>\b(?i:forest|earth)\b</highlight>
   <highlight tags='color' fg='005f5f'>\b(?i:sonic|teal|turquoise|viridian)\b</highlight>
   <highlight tags='color' fg='804124'>\b(?i:auburn|brown|tan(?:ned)?)\b</highlight>
+  <highlight tags='color' fg='804124'>\b(?i:umber)\b</highlight>
   <highlight tags='color' fg='800080'>\b(?i:amethyst|purpl(?:e|ish)|violet)\b</highlight>
   <highlight tags='color' fg='ff00ff'>\b(?i:magenta|fuschia)\b</highlight>
   <highlight tags='color' fg='875fd7'>\b(?i:lavender|lilac)\b</highlight>
@@ -255,7 +258,7 @@
   <highlight tags='color' fg='00ffff'>\b(?i:ic(?:e|y|ed))\b</highlight>
   <highlight tags='color' fg='bb0a1e'>\b(?:blood(?!s|hound|wood)\w*)</highlight>
   <highlight tags='color' fg='aa0000'>\b(?i:carmine|crimson|red|scarlet|vermilion)\b</highlight>
-  <highlight tags='color' fg='ff0000'>\b(?i:rub(?:y|ies)|reddish)\b</highlight>
+  <highlight tags='color' fg='ff0000'>\b(?i:rub(?:y|ies)|reddish|ruddy)\b</highlight>
   <highlight tags='color' fg='faafbe'>\b(?i:ros[ey]|pink(?:ish)?)\b</highlight>
   <highlight tags='color' fg='ff7f50'>\b(?i:coral)\b</highlight>
   <highlight tags='color' fg='ffaf87'>\b(?i:peach)\b</highlight>
@@ -273,13 +276,12 @@
   <highlight tags='color' fg='0000a0'>(?i:(?&#60;=\brainb)o(?=w\b))</highlight>
   <highlight tags='color' fg='800080'>(?i:(?&#60;=\brainbo)w\b)</highlight>
 
-  <highlight tags='name self' fg='00ffff'>\b(?i:Brikus|brik|Timov|Dockson|Hoid)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name self' fg='00ffff'>\b(?i:Kragdruk|Kaeredwyn|Brumarok|Jovalon|Rheodin)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name self' fg='00ffff'>\b(?:Krag|Bru|Brum|Kaer)\b</highlight>
+  <highlight tags='name self' fg='00ffff'>\b(?i:Brikus|brik|Timov|Dockson|Hoid|Ruinar)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name self' fg='00ffff'>\b(?i:Kragdruk|Kaeredwyn|Brumarok|Jovalon|Rheodin|Reynauld)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name self' fg='00ffff'>\b(?:Krag(?! dwel| yeti)|Bru|Brum|Kaer)\b</highlight>
   <highlight tags='name self' fg='00ffff'>\b(?i:Soulard|Choutou|Euclide|Welston)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name self' fg='00ffff'>\b(?i:Marhand|Wyrmpoint)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name self' fg='00ffff'>\b(?:Mar)\b</highlight>
-  <highlight tags='name self' fg='00ffff'>\b(?i:Reodin|Tansoon)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name self' fg='00ffff'>\b(?i:Gortun|Jietou|Khvaren|Monit|Ogleby|Reodin|Sazyd|Tansoon|Xheen|Zlabar)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friend hoa' fg='005f00'>\b(?i:Treeva)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friend siierra' fg='005f00'>\b(?i:Siierra|Kayliegh|Kinsley|Emelyia)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friend melivn' fg='005f00'>\b(?i:Melivn|Tigerwolf|Ktovashy)\b(?! was not found in Elanthia)</highlight>
@@ -290,7 +292,7 @@
   <highlight tags='name friend simucon' fg='005f00'>\b(?i:Alasatia|Calael|Cigger|Fromer|Kilthal)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friendly simucon' fg='008000'>\b(?i:Deza|Maylan|Naamit|Nairdin|Rolfard|Rozy|Subarashi)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friendly simucon landing' fg='008000'>\b(?i:Cruxophim|Seomanthe)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name known simucon' fg='005f5f'>\b(?i:Tool|Bombero|Chopad)\b</highlight>
+  <highlight tags='name known simucon' fg='005f5f'>\b(?i:Tool|Bombero|Chopad|Laeech)\b</highlight>
   <highlight tags='name friendly' fg='008000'>\b(?i:Aurach|Jemiquist|Archales)\b(?! was not found in Elanthia)</highlight>
   <!--<highlight tags='name hoa officer' bg='404040'>\w(?=(hirlin|iierra|agz|ysong|uadjha|urakar)(?! was not found in Elanthia))</highlight>-->
   <highlight tags='name friendly whirlin' fg='005f00'>\b(?i:Whirlin|Oceaniania|Jyinaeir|Thaeren)\b(?! was not found in Elanthia)</highlight>
@@ -300,18 +302,20 @@
   <highlight tags='name friendly nuadjha' fg='008000'>\b(?i:Nuadjha|Arkios)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friendly bandits' fg='008000'>\b(?i:Diablic|Githros|Jooniper|Myasarie|Nevik|Silversi|Taedon|Tylanthriel|Martieln)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friendly illistim' fg='008000'>\b(?i:Heartfire|Luxelle)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name friendly reim' fg='008000'>\b(?i:Nodyre|Nuadjha|Stormyrain|Wolfstarr|Ylandra)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name friendly reim' fg='008000'>\b(?i:Nodyre|Nuadjha|Stormyrain|Ylandra)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friendly reim jia' fg='008000'>\b(?i:Jiarine|Linsha)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name known' fg='005f5f'>\b(?i:Varucca)\b</highlight>
   <highlight tags='name known' fg='005f5f'>\b(?i:Sacru|Telum)\b</highlight>
   <highlight tags='name known maetriks' fg='005f5f'>\b(?i:Maetriks|Marcelina|Nihrvanah|Daheus)\b</highlight>
+  <highlight tags='name known beldannon' fg='005f5f'>\b(?i:Beldanno|Beldannon|Ushakaron)\b</highlight>
   <highlight tags='name known vaalor' fg='400000'>\b(?i:First|High|Squire)? Legionnaire\b</highlight>
   <highlight tags='name known vaalor' fg='005f5f'>\b(?i:Esana|Gellert|Kakoon|Menos)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name known reim' fg='005f5f'>\b(?i:Crime|Jeril|Shinanigans|Leifa|Fyrentennimar)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name known alastir' fg='005f5f'>\b(?i:Alastir|Spoilz|Erykk)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name known reim' fg='005f5f'>\b(?i:Crime|Jeril|Shinanigans|Leifa|Fyrentennimar|Neovik|Xanlin|Wolfstarr)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name known orpius' fg='005f5f'>\b(?i:Orpius|Melenie)\b(?! was not found in Elanthia|Neovik|Xanlin)</highlight>
+  <highlight tags='name known alastir' fg='005f5f'>\b(?i:Alastir|Spoilz|Erykk|Gromsph)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name known arshwikk' fg='005f5f'>\b(?i:Arshwikk|Folksinger|Hiawathah|Kinjaro)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name known reim' fg='005f5f'>\b(?i:Ewin|Xred|Zyllian|Claudaro|Falvicar|Enestrie|Sorrenn|Daedeus|Hammibal)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name known landing' fg='005f5f'>\b(?i:Cryheart|Dergoatean|Raelee|Katiesa|Madmountan|Puptilian|Hoodtralfeck|Iekid)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name known landing' fg='005f5f'>\b(?i:Cryheart|Dergoatean|Raelee|Katiesa|Madmountan|Puptilian|Hoodtralfeck|Iekid|Leafiara)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name known' fg='005f5f'>\b(?i:Japhrimel|Roblar|Vishra)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name known hoy' fg='005f5f'>\b(?i:Yakushi|Hoy|Neimanz)\b</highlight>
   <highlight tags='name npc storyline badguy' fg='ffaaaa'>\b(?i:Chaston|Drangell|Grishom|Ambrus|Disean|Raznel|Vagrance|Oantal)\b</highlight>
@@ -320,18 +324,28 @@
   <highlight tags='name npc storyline' fg='d2bc2a'>\b(?i:Murstyr|Qalinor|Jaranzair)\b</highlight>
   <highlight tags='name npc storyline teras' fg='d2bc2a'>\b(?i:Eldalina)\b</highlight>
 
-  <highlight tags='name npc merchant' fg='00a0ff'>\b(?:Bazzelwyn|Favretto|Glearnim|Haleen|Ledirth|Jellybeard|Ravias|Xerria|Felthrop|Weffinait|Kylistra|Tysiri|Evlissa|Caelyna|Jensun|Seskel|Otuio|Clefford|Tanki|Arastir|Eosten|Lythwen|Gasen|Irelain|Naughtbrite)\b</highlight>
+  <highlight tags='name npc merchant' fg='00a0ff'>\b(?:Bazzelwyn|Favretto|Glearnim|Haleen|Ledirth|Jellybeard|Ravias|Xerria|Felthrop|Weffinait|Kylistra|Tysiri|Evlissa|Caelyna|Jensun|Seskel|Otuio|Clefford|Tanki|Arastir|Eosten|Lythwen|Gasen|Irelain|Naughtbrite|Skryn)\b</highlight>
   <highlight tags='name npc merchant ebongate' fg='00a0ff'>\b(?:Airisu|Bartoldt|Beitris|Binklar|Boring|Druena|Duplicity|Edero|Fana|Farain|Genose|Gizwizit|Ghlum|Goblyn|Goldilynn|Ielisha|Ilixil|Indres|Jiddie|Kyrinthe|Laulu|Maescia|Pelil|Philonar|Phrolo|Rikelle|Rikelle|Rumdotter|Sauli|Strella|Taeliryn|Twiddley)\b</highlight>
   <highlight tags='name npc merchant ebongate 2017' fg='00a0ff'>\b(?:Ahriel|Aneela|Aslyrion|Bimbibick|Chelise|Damp|Dipideedoo|Drezda|Elsia|Frazzelwyn|Gunkweeler|Hibis|Ianthra|Marent|Mhad|Nimaya|Ohshean|Oirisu|Phey|Saryen|Sylvere|Taionia|Tholok|Tufeetti|Upsy|Vanetti|Varilora|Yarimore|Zenlia|Zylder)\b</highlight>
+  <highlight tags='name npc merchant ebongate 2018' fg='00a0ff'>\b(?:Ambie|Bastique|Chubbins|Dahria|Eloweeze|Essensia|Feliathes|Firio|Fright|Grawlix|Hylania|Karuseau|Llalariel|Moltin|Rimmah|Royg|Sakurvee|Sunex|Sunliliye|Tselise|Urszula|Weensie)\b</highlight>
   <highlight tags='name npc merchant duskruin' fg='00a0ff'>\b(?:Lahke|Culd|Shahno|Selandrine|Siduine)\b</highlight>
   <highlight tags='name npc merchant ccf-2018' fg='00a0ff'>\b(?:Aepoch|Aneela|Baroqe|Bliza|Blusteri|Davro|Dett|Olba|Rashiva|Yriwyn)\b</highlight>
+  <highlight tags='name npc merchant carnival-of-freaks 2018' fg='00a0ff'>\b(?:Grolf|Hexxie|Holtum|Kyrralynn|Moirralynn|Nimudi|Perdu|Phestor|Sprague|Upai|Ymantha|Ziito)\b</highlight>
+
+  <highlight tags='analyze lighten best' fg='005f00'>is as light as it can get</highlight>
+  <highlight tags='analyze deepen best' fg='005f00'>its pockets could not possibly get any deeper</highlight>
+  <highlight tags='analyze deepen alert' fg='ffff000'>you might be able to have a talented merchant deepen its pockets</highlight>
+  <highlight tags='analyze lighten alert' fg='ffff000'>might be able to have a talented merchant lighten</highlight>
+
+  <highlight tags='rpa alert' fg='ffff000'>^(?:With a sudden flash of insight, you realize you now understand more of what you have experienced|You take a deep breath, and look around with renewed vigor.  It is good to be alive, and an adventurer in this land\.).*$</highlight>
 
   <highlight tags='boora shady' fg='ff0000'>\b(?i:Boora|Sazarr|Baeleron|Rydgel)\b</highlight>
   <highlight tags='wrathbringer shady' fg='ff0000'>\b(?i:Locrean)\b</highlight>
 
   <highlight tags='merchant raffle highalert' fg='ffff00' bg='ff000'>You sense you have just won a raffle for</highlight>
+  <highlight tags='merchant fishhook highalert' fg='ffff00' bg='ff000'>(?:a tiny sea glass sphere|bejeweled mammoth tusk warhorn|glittering squirmy snail|a tiny steel ball|large rotten molar|plush dragon-shaped blanket|suddenly appears in midair and falls to the ground)</highlight>
   <highlight tags='fof game highalert' fg='ffff00' bg='ff000'>tiny tin wyvern</highlight>
-  <highlight tags='duskruin highalert' fg='ffff00' bg='ff000'>four-ringed metal pendant|reticulated crystal-edged golvern segment|krodera automaton</highlight>
+  <highlight tags='duskruin highalert' fg='ffff00' bg='ff000'>four-ringed metal pendant|reticulated crystal-edged golvern segment</highlight>
   <highlight tags='duskruin highalert' fg='ffff00' bg='ff000'>We were impressed with your performance, so you've been invited to the smithy by the bloodforge.</highlight>
   <highlight tags='duskruin highalert' fg='ffff00' bg='ff000'>this is useless to you, but I'll make sure the blacksmith knows you're coming!"  He winks and vanishes into the sewers\.</highlight>
   <highlight tags='duskruin notice' fg='ffffff'>dueling slip booklet|rat token jar</highlight>
@@ -383,6 +397,8 @@
   <highlight tags='ebongate squelched' fg='141414'>^Spectral hands appear from the ground, writhing and grasping at the air .*</highlight>
 
   <highlight tags='ebongate dig alert' fg='ffff00'>^You need your left hand free to help grasp the shovel!$</highlight>
+  <highlight tags='ebongate dig alert' fg='ffff00'>^You cannot hold any more silvers\.$</highlight>
+  <highlight tags='ebongate dig alert' fg='ffff00'>Your games pass has expired, you'll need to buy a new one to dig here\.</highlight>
   <highlight tags='ebongate dig highalert' fg='ffff00' bg='ff0000'>.*(?:locking the hinges in place to prop the lid up safely\.|which begins to glow\.).*</highlight>
 
   <highlight tags='ebongate dig squelched' fg='141414'>.* has been picked clean of belongings.  The stench of decay .*</highlight>
@@ -408,6 +424,7 @@
   <highlight tags='ebongate dig squelched' fg='141414'>^You remove a crystalline globe set upon a thick silver base.*</highlight>
   <highlight tags='ebongate dig squelched' fg='141414'>^You brush off any remaining .* that may have been on you\.$</highlight>
   <highlight tags='ebongate dig squelched' fg='141414'>.*Pondering what could have fallen from .*, you glance around\.  You notice</highlight>
+  <highlight tags='ebongate dig squelched' fg='141414'>.*grabs some indigo-black seashells from.*</highlight>
 
   <highlight tags='ebongate squelched' fg='141414'>^With great effort you combine the value of your two tickets, leaving you with a single .* valued at</highlight>
   <highlight tags='ebongate squelched' fg='141414'>.* tuck your findings into your leather ticket pouch, bringing the total to</highlight>
@@ -420,8 +437,17 @@
   <highlight tags='ebongate squelched' fg='141414'>^With great effort you combine the value of your two seashells, leaving you with a single indigo-black seashells valued at</highlight>
   <highlight tags='ebongate squelched' fg='141414'>^You (?:grab|remove|put) some indigo-black seashells.*</highlight>
   <highlight tags='ebongate squelched' fg='141414'>^You rummage through your inventory, looking for seashells.  You find</highlight>
-  <highlight tags='ebongate squelched' fg='141414'>new seashells and tuck your findings into your wooden bucket, bringing the total to</highlight>
-  <highlight tags='ebongate notice' fg='ffffff'>(?&#60;=new seashells and tuck your findings into your wooden bucket, bringing the total to )\d+</highlight>
+  <highlight tags='ebongate squelched' fg='141414'>new seashells and tuck your findings into your seashell bucket, bringing the total to</highlight>
+  <highlight tags='ebongate notice' fg='ffffff'>(?&#60;=new seashells and tuck your findings into your seashell bucket, bringing the total to )\d+</highlight>
+  <highlight tags='ebongate fishing alert' fg='ffff00'>You suddenly feel a brief tug on your line, and then swift pulling motions as you yank .*</highlight>
+  <highlight tags='ebongate fishing best' fg='005f00'>.*Moving swiftly, you quickly unhook it from the line and take hold of it tightly\.$</highlight>
+  <highlight tags='ebongate fishing fail' fg='ff8000'>^Your line suddenly twists and then breaks with a sharp, poignant \*SNAP\*!$</highlight>
+  <highlight tags='ebongate fishing highalert' fg='ffff00' bg='ff000'>^The (?:.*) probably deserves a close inspection.*</highlight>
+  <highlight tags='ebongate fishing highalert' fg='ffff00' bg='ff000'>yellowed marble-sized egg</highlight>
+  <highlight tags='ebongate fishing squelched' fg='141414'>^You take in some of the slack from your.*</highlight>
+  <highlight tags='ebongate fishing squelched' fg='141414'>.* flying through the air before landing with a soft \*plink\* quite a large distance away from the dock\.$</highlight>
+  <highlight tags='ebongate fishing squelched' fg='141414'>.* becoming visible as it breaks the surface and dangles briefly over the water\.$</highlight>
+
 
   <highlight tags='ebongate muted' fg='333333'>^You try to empty the contents .*, but nothing comes out\.$</highlight>
   <!--
@@ -450,11 +476,11 @@
   <preset id='voln' bg='001a00'/>
   <key id='alt'>
     <key id='a' macro='\x;e Ranged.fire\r'/>
-    <key id='b' macro='\x;eq fput "get \? from #{UserVars.lootsack}"'/>
-    <key id='g' macro='\x;eq item = "\?"; multifput "get #{item}", "put #{item} in #{UserVars.lootsack}"'/>
+    <key id='b' macro='\x;eq fput "get \? from my #{UserVars.lootsack}"'/>
+    <key id='g' macro='\x;eq item = "\?"; multifput "get #{item}", "put #{item} in my #{UserVars.lootsack}"'/>
     <key id='up' action='send_second_last_command'/>
   </key>
-  <key id='ctrl+b' macro='\x;eq fput "put \? in #{UserVars.lootsack}"'/>
+  <key id='ctrl+b' macro='\x;eq fput "put \? in my #{UserVars.lootsack}"'/>
   <key id='enter' action='send_command'/>
   <key id='left' action='cursor_left'/>
   <key id='right' action='cursor_right'/>
@@ -465,7 +491,8 @@
   <key id='backspace' action='cursor_backspace'/>
   <key id='win_backspace' action='cursor_backspace'/>
   <key id='delete' action='cursor_delete'/>
-  <key id='tab' action='switch_current_window'/>
+  <key id='tab' action='autocomplete'/>
+  <key id='shift+tab' action='switch_current_window'/>
   <key id='ctrl+page_up' action='scroll_current_window_up_one'/>
   <key id='ctrl+page_down' action='scroll_current_window_down_one'/>
   <key id='page_up' action='scroll_current_window_up_page'/>
@@ -511,14 +538,20 @@
     <!--
       <window class='text' top='6' left='12' width='cols-12' height='6' value='showxml_debug_window' buffer-size='1000' />
     -->
-    <window class='text' top='11' left='12' width='cols-12' height='lines-12' value='main' buffer-size='2000' />
-    <window class='text' top='0' left='0' width='11' height='lines-28' value='death,logons' buffer-size='500' />
-    <window class='text' top='0' left='12' width='cols-12' height='6' value='lnet,thoughts,voln' buffer-size='1000' />
-    <window class='text' top='6' left='12' width='cols-12' height='5' value='familiar,speech' buffer-size='1000' />
 
-    <window class='indicator' top='lines-27' left='0' height='1' width='11' value='right' fg='444444,ffffff'/>
-    <window class='indicator' top='lines-26' left='0' height='1' width='11' value='left' fg='444444,ffffff'/>
-    <window class='indicator' top='lines-25' left='0' height='1' width='11' value='spell' fg='444444,ffffff'/>
+    <!--
+    <window class='text' top='0' left='12' width='cols-12' height='lines-1' value='main,lnet,thoughts,voln,familiar' buffer-size='2000' />
+    -->
+
+    <window class='text' top='(lines*0.25).ceil+1' left='12' width='cols-12' height='lines-((lines*0.25).ceil+2)' value='main' buffer-size='100000' />
+    <window class='text' top='0' left='0' width='11' height='lines-30' value='death,logons' buffer-size='500' />
+    <window class='text' top='0' left='12' width='cols-12' height='(lines*0.125).ceil' value='lnet,thoughts,voln' buffer-size='10000' />
+    <window class='text' top='(lines*0.125).ceil' left='12' width='cols-12' height='(lines*0.125).floor-1' value='familiar,speech' buffer-size='10000' />
+    <window class='text' top='(lines*0.25).ceil-1' left='12' width='cols-12' height='2' value='bounty' buffer-size='100' />
+
+    <window class='indicator' top='lines-29' left='0' height='2' width='11' value='right' fg='444444,ffffff'/>
+    <window class='indicator' top='lines-27' left='0' height='2' width='11' value='left' fg='444444,ffffff'/>
+    <window class='indicator' top='lines-25' left='0' height='2' width='11' value='spell' fg='444444,ffffff'/>
 
     <window class='indicator' top='lines-1' left='12' height='1' width='1' label='&gt;' value='prompt' fg='444444,44444'/>
     <window class='command' top='lines-1' left='13' width='cols-13' height='1' />
