@@ -29,6 +29,8 @@
   <highlight tags='notice gem' fg='ffffff'>^The .* (?:jar|bottle|beaker) is full!$</highlight>
   <highlight tags='notice flare' fg='ffffff'>.* glows intensely with a verdant light!$</highlight>
   <highlight tags='disarm curse highalert' fg='ffff00' bg='ff000'>An uncontrollable urge to scratch the rash covering your body overcomes you, and you madly dig at it with your fingernails!</highlight>
+  <highlight tags='disarm curse highalert' fg='ffff00' bg='ff000'>The invisible rash continues to spread over your body and the feeling of defenselessness festers within you.</highlight>
+  <highlight tags="disarm curse recovery" fg='0000ff'>^You no longer feel so defenseless and the rash seems to disappear\.$</highlight>
 
   <highlight fg='ffff00'>(?:GameMaster|GameHost)</highlight>
   <highlight fg='ffff00'>SEND\[</highlight>
@@ -41,10 +43,11 @@
   <highlight fg='0000a0'>^(?:.*Click ACCEPT to accept the offer or DECLINE to decline it\.  The offer will expire in 30 seconds\.|You accept .* offer and are now holding.*|Offer declined\.|.* has cancelled the offer\.)\s*$</highlight>
   <highlight fg='0000a0'>^.* just gave you \d+ coins which you quickly pocket\.$</highlight>
 
-  <highlight tags="good" fg='0000ff'>^(?:You feel fully energetic again\.|You feel at full magical power again\.|You do not feel drained anymore\.|You feel less drained\.)$</highlight>
-  <highlight tags="good" fg='0000ff'>^(?:You feel recovered from your whirlwind flurry of strikes\.)$</highlight>
-  <highlight tags="good" fg='0000ff'>^(?:Your muscles no longer feel as weak as they did a moment ago\.)$</highlight>
-  <highlight tags="good" fg='0000ff'>^(?:You notice the feeling of elemental fatigue fade away\.)$</highlight>
+  <highlight tags="recovery" fg='0000ff'>^(?:You feel fully energetic again\.|You feel at full magical power again\.|You do not feel drained anymore\.|You feel less drained\.)$</highlight>
+  <highlight tags="recovery" fg='0000ff'>^(?:You feel recovered from your whirlwind flurry of strikes\.)$</highlight>
+  <highlight tags="recovery" fg='0000ff'>^(?:Your muscles no longer feel as weak as they did a moment ago\.)$</highlight>
+  <highlight tags="recovery" fg='0000ff'>^(?:You notice the feeling of elemental fatigue fade away\.)$</highlight>
+
   <highlight tags="good" fg='ffffff'>.* falls to the floor in a lifeless mass of flesh and fractured bones\.$</highlight>
 
   <highlight tags='deed success' fg='005f00'>.*You sense an accomplishment of greater understanding.*</highlight>
@@ -197,6 +200,8 @@
   <highlight tags='bounty critical' fg='aa0000'>^(?:\[You have failed your current Adventurer&#39;s Guild task\.\]|You have failed in your task.  Return to the Adventurer&#39;s Guild for further instructions\.)$</highlight>
   <highlight tags='bounty critical' fg='aa0000'>^(?:\[If you wish to report on your success anyway, .*)$</highlight>
   <highlight tags='bounty critical' fg='aa0000'>^(?:.*If you report back on your success now, you may well lose out on some valuable life experience\.\s*)$</highlight>
+  <highlight tags='bounty notice' fg='ffffff'>(?&#60;=You need to kill) \d+ (?=of them to complete your task\.)</highlight>
+  <highlight tags='bounty notice' fg='ffffff'>(?&#60;=You need to kill) \d+ (?=more of them to complete your task\.)</highlight>
 
   <highlight tags='forging best' fg='005f00'>^(?:You pause and lift the still glowing .* A moment of close inspection is all you need to tell that you have done your best work this time.*|You finish your work and stand up, .* You smile as you realize that this piece is the very best that you can create\.)$</highlight>
   <highlight tags='forging success' fg='008000'>^(?:You finish your work and .* satisfied with (?:your work|the piece you&#39;ve created))\.$</highlight>
@@ -276,7 +281,7 @@
   <highlight tags='color' fg='0000a0'>(?i:(?&#60;=\brainb)o(?=w\b))</highlight>
   <highlight tags='color' fg='800080'>(?i:(?&#60;=\brainbo)w\b)</highlight>
 
-  <highlight tags='name self' fg='00ffff'>\b(?i:Brikus|brik|Timov|Dockson|Hoid|Ruinar)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name self' fg='00ffff'>\b(?i:Brikus|brik|Timov|Dockson|Hoid|Ruinar|Elind)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name self' fg='00ffff'>\b(?i:Kragdruk|Kaeredwyn|Brumarok|Jovalon|Rheodin|Reynauld)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name self' fg='00ffff'>\b(?:Krag(?! dwel| yeti)|Bru|Brum|Kaer)\b</highlight>
   <highlight tags='name self' fg='00ffff'>\b(?i:Soulard|Choutou|Euclide|Welston)\b(?! was not found in Elanthia)</highlight>
@@ -286,19 +291,19 @@
   <highlight tags='name friend siierra' fg='005f00'>\b(?i:Siierra|Kayliegh|Kinsley|Emelyia)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friend melivn' fg='005f00'>\b(?i:Melivn|Tigerwolf|Ktovashy)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friend ragz' fg='005f00'>\b(?i:Ragz|Morgahan)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name friend jon' fg='005f00'>\b(?i:Spenster|Olrick)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name friend blanks' fg='005f00'>\b(?i:Tservin|Blanks|Raewynn)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name friend jason' fg='005f00'>\b(?i:Rencelas)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name friend simucon' fg='005f00'>\b(?i:Alasatia|Calael|Cigger|Fromer|Kilthal)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name friendly simucon' fg='008000'>\b(?i:Deza|Maylan|Naamit|Nairdin|Rolfard|Rozy|Subarashi)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name friendly simucon landing' fg='008000'>\b(?i:Cruxophim|Seomanthe)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name known simucon' fg='005f5f'>\b(?i:Tool|Bombero|Chopad|Laeech)\b</highlight>
-  <highlight tags='name friendly' fg='008000'>\b(?i:Aurach|Jemiquist|Archales)\b(?! was not found in Elanthia)</highlight>
-  <!--<highlight tags='name hoa officer' bg='404040'>\w(?=(hirlin|iierra|agz|ysong|uadjha|urakar)(?! was not found in Elanthia))</highlight>-->
-  <highlight tags='name friendly whirlin' fg='005f00'>\b(?i:Whirlin|Oceaniania|Jyinaeir|Thaeren)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friend durakar' fg='005f00'>\b(?i:Durakar|Yarrious)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friend ondreian' fg='005f00'>\b(?i:Ondreian)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friend tysong' fg='005f00'>\b(?i:Tysong|Rasko|Gharr)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name friend jon' fg='005f00'>\b(?i:Spenster|Olrick)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name friend blanks' fg='005f00'>\b(?i:Tservin|Blanks|Raewynn)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name friend jason' fg='005f00'>\b(?i:Rencelas)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name friend naamit' fg='005f00'>\b(?i:Naamit|Tziporah)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name friend simucon' fg='005f00'>\b(?i:Alasatia|Calael|Cigger|Fromer|Kilthal)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name friendly simucon' fg='008000'>\b(?i:Deza|Maylan|Nairdin|Rolfard|Rozy|Sabotage|Subarashi)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name friendly simucon landing' fg='008000'>\b(?i:Cruxophim|Seomanthe)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name known simucon' fg='005f5f'>\b(?i:Tool|Bombero|Chopad|Laeech)\b</highlight>
+  <highlight tags='name friendly' fg='008000'>\b(?i:Aurach|Jemiquist|Archales)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name friendly whirlin' fg='005f00'>\b(?i:Whirlin|Oceaniania|Jyinaeir|Thaeren)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friendly nuadjha' fg='008000'>\b(?i:Nuadjha|Arkios)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friendly bandits' fg='008000'>\b(?i:Diablic|Githros|Jooniper|Myasarie|Nevik|Silversi|Taedon|Tylanthriel|Martieln)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friendly illistim' fg='008000'>\b(?i:Heartfire|Luxelle)\b(?! was not found in Elanthia)</highlight>
@@ -311,10 +316,10 @@
   <highlight tags='name known vaalor' fg='400000'>\b(?i:First|High|Squire)? Legionnaire\b</highlight>
   <highlight tags='name known vaalor' fg='005f5f'>\b(?i:Esana|Gellert|Kakoon|Menos)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name known reim' fg='005f5f'>\b(?i:Crime|Jeril|Shinanigans|Leifa|Fyrentennimar|Neovik|Xanlin|Wolfstarr)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name known orpius' fg='005f5f'>\b(?i:Orpius|Melenie)\b(?! was not found in Elanthia|Neovik|Xanlin)</highlight>
+  <highlight tags='name known orpius' fg='005f5f'>\b(?i:Orpius|Melenie)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name known alastir' fg='005f5f'>\b(?i:Alastir|Spoilz|Erykk|Gromsph)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name known arshwikk' fg='005f5f'>\b(?i:Arshwikk|Folksinger|Hiawathah|Kinjaro)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name known reim' fg='005f5f'>\b(?i:Ewin|Xred|Zyllian|Claudaro|Falvicar|Enestrie|Sorrenn|Daedeus|Hammibal)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name known reim' fg='005f5f'>\b(?i:Ewin|Xred|Zyllian|Claudaro|Falvicar|Enestrie|Sorrenn|Daedeus|Hammibal|Teclys|Smokette)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name known landing' fg='005f5f'>\b(?i:Cryheart|Dergoatean|Raelee|Katiesa|Madmountan|Puptilian|Hoodtralfeck|Iekid|Leafiara)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name known' fg='005f5f'>\b(?i:Japhrimel|Roblar|Vishra)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name known hoy' fg='005f5f'>\b(?i:Yakushi|Hoy|Neimanz)\b</highlight>
@@ -492,7 +497,7 @@
   <key id='win_backspace' action='cursor_backspace'/>
   <key id='delete' action='cursor_delete'/>
   <key id='tab' action='autocomplete'/>
-  <key id='shift+tab' action='switch_current_window'/>
+  <key id='0' action='switch_current_window'/>
   <key id='ctrl+page_up' action='scroll_current_window_up_one'/>
   <key id='ctrl+page_down' action='scroll_current_window_down_one'/>
   <key id='page_up' action='scroll_current_window_up_page'/>
