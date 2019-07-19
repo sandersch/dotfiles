@@ -35,8 +35,8 @@
   <highlight fg='ffff00'>(?:GameMaster|GameHost)</highlight>
   <highlight fg='ffff00'>SEND\[</highlight>
 
-  <highlight fg='00ffff'>^You (?:gesture at|attempt|channel|fire|hurl|swing|thrust).*$</highlight>
-  <highlight fg='00ffff'>^.*\b(?:into|at|in|(?&#60;!that may have been )on|to) you[!.]\s*$</highlight>
+  <highlight fg='00ffff'>^You (?:gesture at|attempt(?! to discern any aspects of this room)|channel|fire|hurl|swing|thrust).*$</highlight>
+  <highlight fg='00ffff'>^.*\b(?:into|at|in|(?&#60;!that may have been )on|(?&#60;!thing stands out) to) you[!.]\s*$</highlight>
   <highlight fg='00ffff'>^.*taps you lightly on the shoulder\.$</highlight>
 
   <highlight fg='0000a0'>^(?:You offer .* Click CANCEL to prematurely cancel the offer\.|.* has accepted your offer and is now holding .*|.* has declined the offer\.|Offer cancelled\.)\s*$</highlight>
@@ -72,9 +72,11 @@
   <highlight tags='otf alert' fg='ffff00'>.* fades into view!$</highlight>
   <highlight tags='otf critical' fg='aa0000'>^(?:Within moments you find yourself soaring over the ground far below!)$</highlight>
   <highlight tags='otf critical' fg='aa0000'>.* rifles through your gear!\s+Somebody call a constable!$</highlight>
-  <highlight tags='otf critical' fg='aa0000'>^Your .* is knocked to the ground!$</highlight>
   <highlight tags='otf danger' fg='ff8000'>^(?:Just as the \w+ begins to surge upward, it suddenly loses its grip and lets you plummet toward the ground!)$</highlight>
   <highlight tags='otf warning' fg='ff0000'>^(?:.* hooks its claws into you!  With a great flap of its wings .* carries you into the air!|You try, but the terrifying flight to certain death takes precedence.  Accept your fate\.)$</highlight>
+
+  <highlight tags='disarm critical' fg='aa0000'>^Your .* is knocked to the ground!$</highlight>
+  <highlight tags='disarm best' fg='005f00'>.* spirit swoops down and picks up .*</highlight>
 
   <highlight tags='charging best' fg='005f00'>^(?:You are unable to add any more charges\.|The orb is already prepared for enchanting\.|It shines brightly for a moment, flickering in color and humming tones of enchantment!)$</highlight>
   <highlight tags='charging success' fg='008000'>^(?:The .* quickly expands into a blue pulsating orb!|The orb resonates in response to each of your gestures and words\.|It grows in size!)$</highlight>
@@ -132,6 +134,7 @@
 
   <highlight tags='enchanting best' fg='005f00'>^(?:Visible wisps of essence dance across the surface.*leaving behind a faint, fading aura\.)$</highlight>
   <highlight tags='enchanting best' fg='005f00'>Unless you are horribly unlucky, you should have no trouble.*</highlight>
+  <highlight tags='enchanting best' fg='005f00'>.*that you can only fail to enchant it if you are horribly unlucky\.$</highlight>
   <highlight tags='enchanting success' fg='008000'>^(?:As the liquid coats the surface.*notice nothing amiss, and conclude that the tempering seems to have been successful.  You estimate that .* should be ready to enchant in about .* days\.|You examine.*though the faint glow appears to be fading rapidly, are satisfied that it is ready to take a standard tempering potion\.|The layers of essence permeating.*It is currently tempered and ready to be enchanted.*level of enchantment\.)$</highlight>
   <highlight tags='enchanting success' fg='008000'>It is currently tempered and ready to be enchanted\.</highlight>
   <highlight tags='enchanting success' fg='008000'>.*it is ready to be enchanted.*</highlight>
@@ -143,6 +146,13 @@
   <highlight tags='enchanting pool critical' fg='aa0000'>.* that can be stored in a personal mana pool!  Go enchant something!$</highlight>
   <highlight tags='enchanting pool notice' fg='ffffff'>(?&#60;=have a total of) \d+ (?=mana points stored in your personal mana pool\.$)</highlight>
   <highlight tags='enchanting pool alert' fg='ffff00'>(?&#60;=^You have) \d+ (?=mana points in your weekly mana pool accumulation limit)</highlight>
+  <highlight tags='enchanting essence best' fg='005f00'>^The rapid accumulation of static essence has left you feeling overwhelmed and temporarily unable to absorb any new essence\.$</highlight>
+  <highlight tags='enchanting essence notice' fg='ffffff'>(?&#60;=^You sense that you have accumulated enough essence to complete a) \+\d+ (?=enchantment\.$)</highlight>
+
+  <highlight tags='ensorcell necrojuice critical' fg='aa0000'>You sense the build up of necrotic energy within you has reached its limits\.</highlight>
+  <highlight tags='ensorcell necrojuice notice' fg='ffff00'>(?&#60;=permanently ensorcell an item for the) \w+</highlight>
+  <highlight tags='ensorcell necrojuice best' fg='005f00'>^Your rapid build up of necrotic energy has left you feeling overwhelmed and temporarily unable to absorb any new necrotic power\.$</highlight>
+  <highlight tags='ensorcell best' fg='005f00'>.*that you can only fail if you are horribly unlucky\.</highlight>
 
   <highlight tags='sorter' fg='005f5f'>^magic(?= \(\d+\):)</highlight>
   <highlight tags='sorter' fg='005f00'>^herb(?= \(\d+\):)</highlight>
@@ -224,14 +234,14 @@
   <highlight tags='profession' fg='0000a0'>\bWizard\b</highlight>
   <highlight tags='profession' fg='b0bf1a'>\bWarrior\b</highlight>
 
-  <highlight tags='item' fg='005f5f'>\b(?:amulet|crystal|(?:heavy|solid) moonstone cube|wand)\b</highlight>
-  <highlight tags='item' fg='005f5f'>\b(?:(?:heavy|solid) moonstone cube)\b</highlight>
-  <highlight tags='item' fg='005f5f'>\b(?:gold-framed clear crystal lens|crystalline prism|bronze square|fine firestone dust|deathstone granules|small statue|heavy quartz orb|smooth amber wand|granite triangle|dull gold coin)\b</highlight>
-  <highlight tags='item' fg='005f5f'>\b(?:potion)\b</highlight>
-  <highlight tags='item' fg='005f5f'>\b(?:sphere)\b</highlight>
-  <highlight tags='item' fg='dfdfaf'>\b(?:palimpsest|paper|papyrus|parchment|scroll|vellum)\b</highlight>
-  <highlight tags='item' fg='5f5f00'>\b(?:box|chest|coffer|strongbox|trunk)\b</highlight>
-  <highlight tags='item' fg='804124'>\b(?:lockpick|vial|wedge)\b</highlight>
+  <highlight tags='item magic' fg='005f5f'>\b(?:amulet|crystal|(?:heavy|solid) moonstone cube|wand)\b</highlight>
+  <highlight tags='item magic' fg='005f5f'>\b(?:gold-framed clear crystal lens|crystalline prism|bronze square|fine firestone dust|deathstone granules|small statue|heavy quartz orb|smooth amber wand|granite triangle|dull gold coin)\b</highlight>
+  <highlight tags='item potion' fg='005f5f'>\b(?:potion)\b</highlight>
+  <highlight tags='item lfm' fg='005f5f'>\b(?:sphere)\b</highlight>
+  <highlight tags='item scroll' fg='dfdfaf'>\b(?:palimpsest|paper|papyrus|parchment|scroll|vellum)\b</highlight>
+  <highlight tags='item box' fg='5f5f00'>\b(?:box|chest|coffer|strongbox|trunk)\b</highlight>
+  <highlight tags='item lockpick' fg='804124'>\b(?:lockpick|vial|wedge)\b</highlight>
+  <highlight tags='item highalert' fg='ffff00' bg='ff000'>iridescent glowing core</highlight>
 
   <highlight tags='color metal' fg='a0a0a0'>\b(?i:platinum|silver(?:s|y|ish)?)\b</highlight>
   <highlight tags='color metal' fg='808080'>\b(?i:iron|metal(?:lic)?|steely?(?! shovel)|pewter)\b</highlight>
@@ -282,7 +292,7 @@
   <highlight tags='color' fg='800080'>(?i:(?&#60;=\brainbo)w\b)</highlight>
 
   <highlight tags='name self' fg='00ffff'>\b(?i:Brikus|brik|Timov|Dockson|Hoid|Ruinar|Elind)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name self' fg='00ffff'>\b(?i:Kragdruk|Kaeredwyn|Brumarok|Jovalon|Rheodin|Reynauld)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name self' fg='00ffff'>\b(?i:Kragdruk|Kaeredwyn|Brumarok|Jovalon|Rheodin|Reynauld|Obohredrum)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name self' fg='00ffff'>\b(?:Krag(?! dwel| yeti)|Bru|Brum|Kaer)\b</highlight>
   <highlight tags='name self' fg='00ffff'>\b(?i:Soulard|Choutou|Euclide|Welston)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name self' fg='00ffff'>\b(?i:Marhand|Wyrmpoint)\b(?! was not found in Elanthia)</highlight>
@@ -377,7 +387,7 @@
   <highlight tags='ebongate muted' fg='333333'>.* everything falls in quite nicely\.$</highlight>
 
   <highlight tags='ebongate muted' fg='333333'>.* just (?:arrived|strode in|stumbled in|limped in|skipped merrily)(?:\.$|[, ].*)</highlight>
-  <highlight tags='ebongate muted' fg='333333'>.* (?:just (?:went|climbed up)|strides away) .*[^!]</highlight>
+  <highlight tags='ebongate muted' fg='333333'>.* (?:just (?:went|climbed up)|strides away) (?!horribly).*[^!]</highlight>
   <highlight tags='ebongate muted' fg='333333'>.* begins to walk .* but suddenly trips .*</highlight>
   <highlight tags='ebongate muted' fg='333333'>^You hear very soft footsteps\.$</highlight>
 
@@ -495,6 +505,7 @@
   <key id='end' action='cursor_end'/>
   <key id='backspace' action='cursor_backspace'/>
   <key id='win_backspace' action='cursor_backspace'/>
+  <key id='127' action='cursor_backspace'/>
   <key id='delete' action='cursor_delete'/>
   <key id='tab' action='autocomplete'/>
   <key id='0' action='switch_current_window'/>
