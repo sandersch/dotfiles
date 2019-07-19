@@ -1,5 +1,5 @@
 # shut off mouse
-set -g mouse on
+set -g mouse off
 
 # center status
 set -g status-justify centre
