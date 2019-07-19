@@ -83,6 +83,7 @@ MAVERICK_host_color=yellow
 NIOBE_host_color=GREEN
 NEO_host_color=WHITE
 TANK_host_color=RED
+RYZE_host_color=magenta
 
 #####  VCS (version control system)  state colors
 
