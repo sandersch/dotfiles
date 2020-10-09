@@ -7,7 +7,6 @@
 inoremap jk <ESC>:noh<CR>
 inoremap kj <ESC>:noh<CR>
 inoremap jj <ESC>:noh<CR>
-inoremap kk <ESC>:noh<CR>
 
 " F2 inserts the date and time at the cursor.
 "
