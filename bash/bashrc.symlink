@@ -68,8 +68,12 @@ fi # [[ -n "$PS1" ]]
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
-eval "$(rbenv init -)"
-export MAKE_OPTS="-j $(nproc)"
+if which rbenv 1>&2 >/dev/null; then
+  eval "$(rbenv init -)"
+fi
+if which nproc 1>&2 >/dev/null; then
+  export MAKE_OPTS="-j $(nproc)"
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
