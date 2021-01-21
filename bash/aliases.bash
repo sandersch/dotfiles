@@ -69,6 +69,7 @@ elif [ -f /etc/redhat-release ]; then
   alias update_system="sudo bash -c 'yum -y update'"
 elif [ $(uname -s) = "Darwin" ]; then
   alias update_system="brew update && brew upgrade"
+  export BASH_SILENCE_DEPRECATION_WARNING=1
 fi
 
 # Simulate OSX's pbcopy and pbpaste on other platforms
