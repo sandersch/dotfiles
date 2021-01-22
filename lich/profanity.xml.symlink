@@ -309,6 +309,7 @@
   <highlight tags='name self' fg='00ffff'>\b(?i:Soulard|Choutou|Euclide|Welston)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name self' fg='00ffff'>\b(?i:Hamuir|Lopen|Amoruk|Emerdir)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name self' fg='00ffff'>\b(?i:Marhand|Wyrmpoint)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name self' fg='00ffff'>\b(?i:Ptuu|Mrodburz|Moash)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name self' fg='00ffff'>\b(?i:Gortun|Jietou|Khvaren|Monit|Ogleby|Reodin|Sazyd|Tansoon|Xheen|Zlabar)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friend hoa' fg='005f00'>\b(?i:Treeva)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friend siierra' fg='005f00'>\b(?i:Siierra|Kayliegh|Kinsley|Emelyia)\b(?! was not found in Elanthia)</highlight>
@@ -458,6 +459,9 @@
   <highlight tags='ebongate dig squelched' fg='141414'>.*Pondering what could have fallen from .*, you glance around\.  You notice</highlight>
   <highlight tags='ebongate dig squelched' fg='141414'>.*grabs some indigo-black seashells from.*</highlight>
 
+  <highlight tags='ebongate games squelched' fg='141414'>"Hurray," a lanky human boy says with little to no emotion.  "Here's your prize" is all he says before handing you some indigo-black seashells.</highlight>
+  <highlight tags='ebongate games squelched' fg='141414'>You head toward the bamboo dart and a lanky human boy approaches you, holding out a hand and demanding 1000 silver.</highlight>
+
   <highlight tags='ebongate squelched' fg='141414'>^With great effort you combine the value of your two tickets, leaving you with a single .* valued at</highlight>
   <highlight tags='ebongate squelched' fg='141414'>.* tuck your findings into your leather ticket pouch, bringing the total to</highlight>
   <highlight tags='ebongate squelched' fg='141414'>^You rummage through your inventory, looking for tickets.  You find nothing, leaving the total tickets in your leather ticket pouch at</highlight>
@@ -582,7 +586,7 @@
     <window class='text' top='(lines*0.25).ceil+1' left='12' width='cols-12' height='lines-((lines*0.25).ceil+2)' value='main' buffer-size='100000' />
     <window class='text' top='0' left='0' width='11' height='lines-30' value='death,logons' buffer-size='500' />
     <window class='text' top='0' left='12' width='cols-12' height='(lines*0.125).ceil' value='lnet,thoughts,voln' buffer-size='10000' />
-    <window class='text' top='(lines*0.125).ceil' left='12' width='cols-12' height='(lines*0.125).floor-1' value='familiar,speech' buffer-size='10000' />
+    <window class='text' top='(lines*0.125).ceil' left='12' width='cols-12' height='(lines*0.125).floor-1' value='familiar,speech,announcements' buffer-size='10000' />
     <window class='text' top='(lines*0.25).ceil-1' left='12' width='cols-12' height='2' value='bounty' buffer-size='100' />
 
     <window class='indicator' top='lines-29' left='0' height='2' width='11' value='right' fg='444444,ffffff'/>
