@@ -20,8 +20,7 @@
   <highlight fg='ff0000'>(?&#60;=(?:a) )(?:calmed|dead|flying|hiding|kneeling|prone|sitting|sleeping|stunned|webbed)(?= [A-Z])</highlight>
   <highlight fg='ff0000'>(?&#60;=(?:and) )(?:calmed|dead|flying|hiding|kneeling|prone|sitting|sleeping|stunned|webbed)(?= [A-Z])</highlight>
   <highlight fg='ff0000'>(?&#60;=(?:a) )(?:calmed|dead|flying|hiding|kneeling|prone|sitting|sleeping|stunned|webbed)(?= and)</highlight>
-  <highlight fg='aa0000'>^.* throws (?:his|her) arms skyward!$|(?:swirling )black void|(?:Dozens of flaming meteors light the sky nearby!|Several flaming meteors light the nearby sky!|Several flaming rocks burst from the sky and smite the area!|A low roar of quickly parting air can be heard above!)</highlight>
-  <highlight fg='ffffff death notice'>^.*(?:falls slack against the floor|falls slack against the ground|falls to the floor, motionless|falls to the ground dead|falls to the ground motionless|and dies|and lies still|goes still|going still|crashes to the ground, motionless|falls to the ground in a lifeless mass of flesh and fractured bones|dissolving on the air as the last cloudy tendrils vanish|shudders a final time|goes limp and falls over|falls to the floor dead|but the effort drains the last|body goes stiff and cold|crumples to the floor motionless|crashes to the floor in a plume of dust|slumps to the ground|living fire extinguished|falls over as the fire slowly fades|curls up into a ball, dead|collapses into a lifeless heap|eyes slowly fades|one last time and expires|collapses to the floor, dead|collapses into a lifeless heap|slams to the floor, dead).*$</highlight>
+  <highlight fg='ffffff death notice'>^.*(?:falls slack against the floor|falls slack against the ground|falls to the floor, motionless|falls to the ground dead|falls to the ground motionless|and dies|and lies still|goes still|going still|crashes to the ground, motionless|falls to the ground in a lifeless mass of flesh and fractured bones|dissolving on the air as the last cloudy tendrils vanish|shudders a final time|goes limp and falls over|falls to the floor dead|but the effort drains the last|body goes stiff and cold|crumples to the floor motionless|crashes to the floor in a plume of dust|slumps to the ground|living fire extinguished|falls over as the fire slowly fades|curls up into a ball, dead|collapses into a lifeless heap|eyes slowly fades|one last time and expires|collapses to the floor, dead|collapses into a lifeless heap|slams to the floor, dead|slumps silently to the ground and begins to rapidly dissipate).*$</highlight>
   <highlight fg='ffffff'>^[^A-Z].* is stunned!$|^You come out of hiding\.$</highlight>
   <highlight fg='ffff00'>^\s*[A-Z]\w+ is stunned!$</highlight>
   <highlight fg='ffaaaa'>.*ruining your hiding place\.$|^You are no longer hidden\.$|^\s*You are (?:stunned|knocked to the ground).*|^You are unable to remain hidden!$|^You are visible again\.$|^You fade into sight\.$|^You fade into view.*|^You feel drained!$|^You have overextended yourself!$|^You feel yourself going into shock!$</highlight>
@@ -37,6 +36,7 @@
   <highlight fg='ffff00'>SEND\[</highlight>
 
   <highlight fg='00ffff'>^You (?:gesture at|attempt(?! to discern any aspects of this room)|channel|fire|hurl|swing|thrust).*$</highlight>
+  <highlight fg='00ffff'>^You take aim .*$</highlight>
   <highlight fg='00ffff'>^.*\b(?:into|at|in|(?&#60;!that may have been )on|(?&#60;!thing stands out) to) you[!.]\s*$</highlight>
   <highlight fg='00ffff'>^.*taps you lightly on the shoulder\.$</highlight>
 
@@ -49,7 +49,9 @@
   <highlight tags="recovery" fg='0000ff'>^(?:Your muscles no longer feel as weak as they did a moment ago\.)$</highlight>
   <highlight tags="recovery" fg='0000ff'>^(?:You notice the feeling of elemental fatigue fade away\.)$</highlight>
 
-  <highlight tags="good" fg='ffffff'>.* falls to the floor in a lifeless mass of flesh and fractured bones\.$</highlight>
+  <highlight tags="combat good" fg='ffffff'>.* falls to the floor in a lifeless mass of flesh and fractured bones\.$</highlight>
+  <highlight tags="combat good" fg='ffffff'>^You could use this opportunity to .*!$</highlight>
+  <highlight tags="combat warning" fg='ffaaaa'>^Distracted, you hesitate .*</highlight>
 
   <highlight tags='deed success' fg='005f00'>.*You sense an accomplishment of greater understanding.*</highlight>
   <highlight tags='critical' fg='aa0000'>^.*(?:drops dead at your feet!|suddenly jumps out of the shadows!|your arms fall slack at your sides).*$</highlight>
@@ -84,6 +86,7 @@
   <highlight tags='charging alert' fg='ffff00'>^(?:The orb isn&#39;t properly prepared for recharging\.|The pulsating orb shrinks somewhat\.|You do not have enough mana\.)$</highlight>
   <highlight tags='charging danger' fg='ff8000'>^(?:You are unable to concentrate completely\.|You are unable to properly channel the flows\.|You feel terribly drained!)$</highlight>
   <highlight tags='charging critical' fg='aa0000'>^(?:It flares a sickening green and then goes dim\.)$</highlight>
+  <highlight tags='charging critical' fg='aa0000'>^(?:The pulsating orb suddenly implodes into nothing but some lingering smoke!|The pulsating orb quickly implodes into oblivion!)$</highlight>
 
   <highlight tags='clericgem best' fg='005f00'>^You feel that you have successfully placed.*</highlight>
   <highlight tags='clericgem success' fg='008000'>^You manage to successfully place.*</highlight>
@@ -157,11 +160,15 @@
   <highlight tags='ensorcell necrojuice notice' fg='ffff00'>(?&#60;=permanently ensorcell an item for the) \w+</highlight>
   <highlight tags='ensorcell necrojuice best' fg='005f00'>^Your rapid build up of necrotic energy has left you feeling overwhelmed and temporarily unable to absorb any new necrotic power\.$</highlight>
   <highlight tags='ensorcell best' fg='005f00'>.*that you can only fail if you are horribly unlucky\.</highlight>
+  <highlight tags='ensorcell notice' fg='424242'>strange necrotic haze</highlight>
+
+  <highlight tags='902 notice' fg='0000d0'>gleams faintly with inner light</highlight>
 
   <highlight tags='sorter' fg='005f5f'>^magic(?= \(\d+\):)</highlight>
   <highlight tags='sorter' fg='005f00'>^herb(?= \(\d+\):)</highlight>
 
   <highlight fg='fff44f'>^Also here:</highlight>
+  <highlight fg='fff44f'>obvious signs of someone hiding</highlight>
 
   <highlight tags='rift' fg='008000'>(?:a rickety wooden staircase|a gaping maw|a slender silvery thread|a plain silver mirror|a sturdy wooden door|a sealed fissure)</highlight>
 
@@ -170,7 +177,7 @@
   <highlight tags='merchant notice' fg='ffff00'>(?&#60;=^A huckster begins to spin the ticket barrel.  After a moment, he stops it and pulls out a ticket.  He examines it for a moment then announces, "The winner is) .*</highlight>
   <highlight tags='merchant' fg='005f00'>^.*comes to a stop pointing directly at you!$</highlight>
 
-  <highlight tags='critical' fg='aa0000'>(?:billowing shadowy cloud|swirling black void|sticky web|whirling sandstorm|a gas cloud)</highlight>
+  <highlight tags='critical' fg='aa0000'>\b(?:billowing shadowy cloud|swirling black void|sticky web|whirling sandstorm|gas cloud)\b</highlight>
   <highlight tags='critical' fg='aa0000'>^(?:A .* rifles through your gear!  Somebody call a constable!|Your .* is struck with .* cast\.|Violent winds tighten around you\.)$</highlight>
 
   <highlight tags='danger' fg='ff8000'>(?:burning web)</highlight>
@@ -222,6 +229,13 @@
   <highlight tags='forging alert' fg='ffff00'>^(?:Things seem to be going .* doesn&#39;t look like anything yet\.)$</highlight>
   <highlight tags='forging danger' fg='ff8000'>^(?:You decide the safest thing to do now is to re-scribe .* still large enough to hold the pattern\.)$</highlight>
   <highlight tags='forging critical' fg='aa0000'>^(?:The steady ring of hammer .*  With a single, faulty blow of your hammer, you&#39;ve totally shattered .* as you shake your head and stare in disbelief\.)$</highlight>
+
+  <highlight tags='guild success' fg='008000'>^(?:\[You have \d+ repetitions? remaining.\]|\[You have \d+ repetition\(s\) remaining for this Warcries task\.\]|\[You have \d+ repetition\(s\) remaining for this War Cries task\.\])$</highlight>
+  <highlight tags='guild success' fg='008000'>^(?:\[You have 1 repetition remaining.\])$</highlight>
+  <highlight tags='guild success' fg='008000'>^(?:\[You have \d+ repetition\(s\) remaining.\])$</highlight>
+  <highlight tags='guild best' fg='005f00'>^(?:\[You have completed this (Warcries|War Cries) task\.\])$</highlight>
+  <highlight tags='guild best' fg='005f00'>^(?:\[You have completed this task\.\])$</highlight>
+  <highlight tags='guild best' fg='005f00'>^(?:\[You have completed your training task\.\])$</highlight>
 
   <highlight tags='squelched' fg='141414'>^.*was not found in Elanthia. \(\w+\)\s*$</highlight>
   <highlight tags='squelched' fg='141414'>^.*pulses with energy.  The pulsing fades and.*$</highlight>
@@ -310,10 +324,11 @@
   <highlight tags='name self' fg='00ffff'>\b(?i:Hamuir|Lopen|Amoruk|Emerdir)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name self' fg='00ffff'>\b(?i:Marhand|Wyrmpoint)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name self' fg='00ffff'>\b(?i:Ptuu|Mrodburz|Moash)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name self' fg='00ffff'>\b(?i:Ishak|Helgo|Bao)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name self' fg='00ffff'>\b(?i:Gortun|Jietou|Khvaren|Monit|Ogleby|Reodin|Sazyd|Tansoon|Xheen|Zlabar)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friend hoa' fg='005f00'>\b(?i:Treeva)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friend siierra' fg='005f00'>\b(?i:Siierra|Kayliegh|Kinsley|Emelyia)\b(?! was not found in Elanthia)</highlight>
-  <highlight tags='name friend melivn' fg='005f00'>\b(?i:Melivn|Tigerwolf|Ktovashy)\b(?! was not found in Elanthia)</highlight>
+  <highlight tags='name friend melivn' fg='005f00'>\b(?i:Melivn|Tigerwolf|Ktovashy|Stupes|Trissara|Raisezor)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friend ragz' fg='005f00'>\b(?i:Ragz|Morgahan)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friend durakar' fg='005f00'>\b(?i:Durakar|Yarrious)\b(?! was not found in Elanthia)</highlight>
   <highlight tags='name friend ondreian' fg='005f00'>\b(?i:Ondreian)\b(?! was not found in Elanthia)</highlight>
@@ -352,8 +367,10 @@
   <highlight tags='name npc storyline badguy' fg='ffaaaa'>\b(?i:Vindicto)\b</highlight>
   <highlight tags='name npc storyline' fg='d2bc2a'>\b(?i:Murstyr|Qalinor|Jaranzair)\b</highlight>
   <highlight tags='name npc storyline teras' fg='d2bc2a'>\b(?i:Eldalina)\b</highlight>
+  <highlight tags='name npc storyline icemule' fg='d2bc2a'>\b(?i:Talliver)\b</highlight>
+  <highlight tags='name npc storyline manticore' fg='d2bc2a'>\b(?i:Hauptwhistle|Fiddlestix|Kyjani|Kruj|Ethelbort|Cyik)\b</highlight>
 
-  <highlight tags='name npc merchant' fg='00a0ff'>\b(?:Bazzelwyn|Favretto|Glearnim|Haleen|Ledirth|Jellybeard|Ravias|Xerria|Felthrop|Weffinait|Kylistra|Tysiri|Evlissa|Caelyna|Jensun|Seskel|Otuio|Clefford|Tanki|Arastir|Eosten|Lythwen|Gasen|Irelain|Naughtbrite|Skryn|Dodeign)\b</highlight>
+  <highlight tags='name npc merchant' fg='00a0ff'>\b(?:Bazzelwyn|Favretto|Glearnim|Haleen|Ledirth|Jellybeard|Ravias|Xerria|Felthrop|Weffinait|Kylistra|Tysiri|Evlissa|Caelyna|Jensun|Seskel|Otuio|Clefford|Tanki|Arastir|Eosten|Lythwen|Gasen|Irelain|Naughtbrite|Skryn|Dodeign|Olienne)\b</highlight>
   <highlight tags='name npc merchant ebongate' fg='00a0ff'>\b(?:Airisu|Bartoldt|Beitris|Binklar|Boring|Druena|Duplicity|Edero|Fana|Farain|Genose|Gizwizit|Ghlum|Goblyn|Goldilynn|Ielisha|Ilixil|Indres|Jiddie|Kyrinthe|Laulu|Maescia|Pelil|Philonar|Phrolo|Rikelle|Rikelle|Rumdotter|Sauli|Strella|Taeliryn|Twiddley)\b</highlight>
   <highlight tags='name npc merchant ebongate 2017' fg='00a0ff'>\b(?:Ahriel|Aneela|Aslyrion|Bimbibick|Chelise|Damp|Dipideedoo|Drezda|Elsia|Frazzelwyn|Gunkweeler|Hibis|Ianthra|Marent|Mhad|Nimaya|Ohshean|Oirisu|Phey|Saryen|Sylvere|Taionia|Tholok|Tufeetti|Upsy|Vanetti|Varilora|Yarimore|Zenlia|Zylder)\b</highlight>
   <highlight tags='name npc merchant ebongate 2018' fg='00a0ff'>\b(?:Ambie|Bastique|Chubbins|Dahria|Eloweeze|Essensia|Feliathes|Firio|Fright|Grawlix|Hylania|Karuseau|Llalariel|Moltin|Rimmah|Royg|Sakurvee|Sunex|Sunliliye|Tselise|Urszula|Weensie)\b</highlight>
@@ -398,6 +415,7 @@
   <highlight tags='bless alert' fg='ffff00'>^Your .* returns to normal\.$</highlight>
   <highlight tags='bless alert' fg='ffff00'>^You .* but your attack has no effect!$</highlight>
   <highlight tags='bless alert' fg='ffff00'>^[A-Z].* but it has no effect!$</highlight>
+  <highlight tags='bless notice' fg='ffffff'>aura of holy light radiates</highlight>
   <highlight tags='sanct alert' fg='ffff00'>^You can't do that while singing Song of Peace\.$</highlight>
   <highlight tags='902 alert' fg='ffff00'>^Your .* stop glowing\.$</highlight>
 
@@ -479,7 +497,7 @@
   <highlight tags='ebongate fishing best' fg='005f00'>.*Moving swiftly, you quickly unhook it from the line and take hold of it tightly\.$</highlight>
   <highlight tags='ebongate fishing fail' fg='ff8000'>^Your line suddenly twists and then breaks with a sharp, poignant \*SNAP\*!$</highlight>
   <highlight tags='ebongate fishing highalert' fg='ffff00' bg='ff000'>^The (?:.*) probably deserves a close inspection.*</highlight>
-  <highlight tags='ebongate fishing highalert' fg='ffff00' bg='ff000'>yellowed marble-sized egg</highlight>
+  <!--<highlight tags='ebongate fishing highalert' fg='ffff00' bg='ff000'>yellowed marble-sized egg</highlight>-->
   <highlight tags='ebongate fishing squelched' fg='141414'>^You take in some of the slack from your.*</highlight>
   <highlight tags='ebongate fishing squelched' fg='141414'>.* flying through the air before landing with a soft \*plink\* quite a large distance away from the dock\.$</highlight>
   <highlight tags='ebongate fishing squelched' fg='141414'>.* becoming visible as it breaks the surface and dangles briefly over the water\.$</highlight>
@@ -539,14 +557,12 @@
   <key id='ctrl+up' action='send_last_command'/>
   <key id='alt+up' action='send_second_last_command'/>
   <key id='resize' action='resize'/>
-  <!--
-  <key id='ctrl+d' macro='\xstance defensive\r'/>
-  <key id='ctrl+o' macro='\xstance offensive\r'/>
-  <key id='ctrl+g' macro='\xremove my buckler\r'/>
-  <key id='ctrl+p' macro='\xwear my buckler\r'/>
-  <key id='ctrl+f' macro='\xtell familiar to '/>
-  -->
-  <key id='ctrl+a' macro='\x;e Ranged.gather\r'/>
+  <key id='198' action='cursor_word_right'/>
+  <key id='226' action='cursor_word_left'/>
+  <key id='ctrl+a' action='cursor_home'/>
+  <key id='ctrl+e' action='cursor_end'/>
+  <key id='ctrl+u' action='cursor_kill_line'/>
+  <key id='ctrl+k' action='cursor_kill_forward'/>
   <key id='f1' macro='\x;eq fput "look in my #{UserVars.lootsack || "backpack"}"\r'/>
   <key id='f2' macro='\x;eq fput "look in my #{UserVars.lootsack2 || "sack"}"\r'/>
   <key id='f3' macro='\x;eq fput "look in my #{UserVars.lootsack3 || "vest"}"\r'/>
@@ -587,6 +603,7 @@
     <window class='text' top='0' left='0' width='11' height='lines-30' value='death,logons' buffer-size='500' />
     <window class='text' top='0' left='12' width='cols-12' height='(lines*0.125).ceil' value='lnet,thoughts,voln' buffer-size='10000' />
     <window class='text' top='(lines*0.125).ceil' left='12' width='cols-12' height='(lines*0.125).floor-1' value='familiar,speech,announcements' buffer-size='10000' />
+    <!--<window class='text' top='(lines*0.25).ceil-1' left='12' width='cols-12' height='2' value='announcements' buffer-size='100' />-->
     <window class='text' top='(lines*0.25).ceil-1' left='12' width='cols-12' height='2' value='bounty' buffer-size='100' />
 
     <window class='indicator' top='lines-29' left='0' height='2' width='11' value='right' fg='444444,ffffff'/>
