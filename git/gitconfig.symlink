@@ -65,10 +65,14 @@
 
 [include]
     path = .gitconfig.local
+
 [pull]
-	ff = only
+    ff = only
 
 [stash]
     showIncludeUntracked = true
     showPatch = true
     showStat = false
+
+[init]
+    defaultBranch = main
