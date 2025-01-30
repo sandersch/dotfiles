@@ -83,7 +83,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 LOCAL_BASH_CONFIG="$HOME/dotfiles/bash/local/$(hostname -s).bash"
-echo "local_config = $LOCAL_BASH_CONFIG"
 if [ -f "$LOCAL_BASH_CONFIG" ]; then
   . "$LOCAL_BASH_CONFIG"
 fi
