@@ -77,10 +77,6 @@ map <leader>m :CtrlPMRU<CR>
 " Get rid of the distracting search highlighting easily
 nnoremap <leader><space> :noh<cr>
 
-" Use tab to move between matching pairs. Much easier to hit than %
-nmap <tab> %
-vmap <tab> %
-
 " Move up and down by screen lines with the arrow keys
 nnoremap <Up> gk
 nnoremap <Down> gj
@@ -101,3 +97,7 @@ nnoremap <leader>v V`]
 
 " Make dot operator work in visual mode
 xnoremap . :normal .<CR>
+
+nnoremap <leader>f :ALEFix<CR>
+nnoremap <leader>, :ALEGoToDefinition<CR>
+nnoremap <leader>S :ALEStopAllLSPs<CR>

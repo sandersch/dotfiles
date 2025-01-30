@@ -4,6 +4,7 @@ filetype off                   " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'autozimu/LanguageClient-neovim'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'gmarik/vundle'
 Bundle 'godlygeek/tabular'
@@ -30,5 +31,8 @@ Bundle 'tpope/vim-tbone'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tsaleh/vim-align'
 Bundle 'yuezk/vim-js'
+
+Bundle 'dense-analysis/ale'
+Bundle 'github/copilot.vim'
 
 filetype plugin indent on     " required!
