@@ -19,6 +19,8 @@ unset ANDROID_SDK
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [ -d "/usr/local/heroku/bin:$PATH" ] && export PATH="/usr/local/heroku/bin:$PATH"
 
+[ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # IMPORTANT: Load RVM into a shell session *as a function*
 #            Otherwise things like switching gemsets won't work.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -68,8 +70,9 @@ fi # [[ -n "$PS1" ]]
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
+
 if which rbenv 1>&2 >/dev/null; then
-  eval "$(rbenv init -)"
+  eval "$(rbenv init - bash)"
 fi
 if which nproc 1>&2 >/dev/null; then
   export MAKE_OPTS="-j $(nproc)"
@@ -78,3 +81,9 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+LOCAL_BASH_CONFIG="$HOME/dotfiles/bash/local/$(hostname -s).bash"
+echo "local_config = $LOCAL_BASH_CONFIG"
+if [ -f "$LOCAL_BASH_CONFIG" ]; then
+  . "$LOCAL_BASH_CONFIG"
+fi
