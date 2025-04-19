@@ -68,12 +68,6 @@ vmap <C-j> ]egv
 " Turn On/Off NERDTree
 map <leader>n :NERDTreeToggle<CR>
 
-" CtrlP maps
-map <leader>t :CtrlP<CR>
-map <leader>p :CtrlPMixed<CR>
-map <leader>b :CtrlPBuffer<CR>
-map <leader>m :CtrlPMRU<CR>
-
 " Get rid of the distracting search highlighting easily
 nnoremap <leader><space> :noh<cr>
 
@@ -101,3 +95,10 @@ xnoremap . :normal .<CR>
 nnoremap <leader>f :ALEFix<CR>
 nnoremap <leader>, :ALEGoToDefinition<CR>
 nnoremap <leader>S :ALEStopAllLSPs<CR>
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>t <cmd>Telescope find_files<cr>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>

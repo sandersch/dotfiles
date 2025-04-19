@@ -7,9 +7,6 @@ call vundle#rc()
 Bundle 'autozimu/LanguageClient-neovim'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'gmarik/vundle'
-Bundle 'godlygeek/tabular'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'kien/ctrlp.vim'
 Bundle 'maxmellon/vim-jsx-pretty'
 Bundle 'mileszs/ack.vim'
 Bundle 'rking/ag.vim'
@@ -34,5 +31,7 @@ Bundle 'yuezk/vim-js'
 
 Bundle 'dense-analysis/ale'
 Bundle 'github/copilot.vim'
+Bundle 'nvim-telescope/telescope.nvim'
+Bundle 'nvim-lua/plenary.nvim'
 
 filetype plugin indent on     " required!
