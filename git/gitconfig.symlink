@@ -67,3 +67,8 @@
     path = .gitconfig.local
 [pull]
 	ff = only
+
+[stash]
+    showIncludeUntracked = true
+    showPatch = true
+    showStat = false
