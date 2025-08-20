@@ -10,12 +10,6 @@ export PAGER=less
 # Put ~/dotfiles/bin and ~/bin at the front of the path
 export PATH="${HOME}/dotfiles/bin:${HOME}/bin:${PATH}"
 
-# Add android sdk tools to path if they exist
-ANDROID_SDK="${HOME}/android-sdk/"
-[ -d "${ANDROID_SDK}/tools" ] && export PATH=${PATH}:${ANDROID_SDK}/tools
-[ -d "${ANDROID_SDK}/platform-tools" ] && export PATH=${PATH}:${ANDROID_SDK}/platform-tools
-unset ANDROID_SDK
-
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [ -d "/usr/local/heroku/bin:$PATH" ] && export PATH="/usr/local/heroku/bin:$PATH"
 
