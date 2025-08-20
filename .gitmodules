@@ -2,6 +2,6 @@
 	path = git/prompt
 	url = https://github.com/lvv/git-prompt.git
 [submodule "vim.symlink/bundle/vundle"]
-	path = vim.symlink/bundle/vundle
+	path = vim/bundle/vundle
 	url = https://github.com/gmarik/vundle.git
 	ignore = dirty
