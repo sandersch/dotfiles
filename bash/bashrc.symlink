@@ -54,7 +54,7 @@ if [[ -n "$PS1" ]]; then
 
     # Set up keychain
     if which keychain 1>&2 >/dev/null; then
-        keychain ~/.ssh/id_rsa ~/.ssh/id_dsa
+        keychain `find ~/.ssh/id_* | \grep -v -E '\.pub$'`
         . ~/.keychain/$HOSTNAME-sh
     fi
 fi # [[ -n "$PS1" ]]
