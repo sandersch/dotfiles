@@ -8,4 +8,4 @@ alias rlog='tail -f log/development.log'
 alias rn='bundle exec rails new'
 alias rs='bundle exec rails s'
 alias ru='bundle exec rackup'
-alias rubobranch="git diff origin/master --name-only --diff-filter=AM | grep .rb | grep -v .rbi | xargs bin/rubocop -A --force-exclusion" # only run lint on files that changed in your branch
+alias rubobranch="git diff origin/master --name-only --diff-filter=AM | \grep .rb | \grep -v .rbi | xargs bin/rubocop -A --force-exclusion" # only run lint on files that changed in your branch
