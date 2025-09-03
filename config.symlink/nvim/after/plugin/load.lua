@@ -5,8 +5,10 @@ vim.opt.hidden = true
 -- vim.cmd('source $HOME/.vim/abbreviations.vim')
 
 -- vim.lsp.set_log_level("debug")
+vim.diagnostic.config({ virtual_text = true })
+
 -- language servers
---local capabilities = vim.lsp.protocol.make_client_capabilities()
+local capabilities = vim.lsp.protocol.make_client_capabilities()
 vim.lsp.config('ruby_lsp', {
   capabilities = capabilities,
   on_attach = function(client, buffer)
@@ -28,20 +30,9 @@ vim.lsp.config('sorbet', {
   capabilities = capabilities,
 })
 vim.lsp.enable('sorbet')
--- vim.lsp.enable('solargraph')
---vim.lsp.config('rubocop', {
-  --settings = {
-    --['rubocop'] = {
-      --cmd = { 'bundle exec rubocop', '--lsp' },
-    --},
-  --}
---})
--- vim.lsp.enable('rubocop')
-vim.diagnostic.config({ virtual_text = true })
 
--- Configure ALE fixers for Ruby
--- vim.b.ale_fixers = {"sorbet", "rubocop", "remove_trailing_lines", "trim_whitespace"}
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
+vim.keymap.set("n", "<leader>,", vim.lsp.buf.definition)
 vim.keymap.set("n", "<leader>d", function()
     local new_config = not vim.diagnostic.config().virtual_lines
   vim.diagnostic.config({ virtual_lines = new_config })

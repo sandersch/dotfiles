@@ -72,21 +72,6 @@ map('n', '<leader>v', 'V`]', opts)
 -- Make dot operator work in visual mode
 map('x', '.', ':normal .<CR>', opts)
 
--- ALE mappings
-map('n', '<leader>f', ':ALEFix<CR>', opts)
-map('n', '<leader>,', 'vim.lsp.buf.definition', opts)
-map('n', '<leader>S', ':ALEStopAllLSPs<CR>', opts)
-
--- LanguageClient mapping
-map('n', '<leader>rn', 'vim.lsp.buf.rename', opts)
-vim.keymap.set("n", "<leader>d", function()
-    local new_config = not vim.diagnostic.config().virtual_lines
-  vim.diagnostic.config({ virtual_lines = new_config })
-end, { desc = 'Toggle diagnostic virtual_lines' })
---vim.keymap.set("n", "g]", function()
-
---end, { desc = 'Show diagnostics in telescope' })
-
 -- Find files using Telescope command-line sugar
 map('n', '<leader>t', '<cmd>Telescope find_files<cr>', opts)
 map('n', '<leader>ff', '<cmd>Telescope find_files<cr>', opts)

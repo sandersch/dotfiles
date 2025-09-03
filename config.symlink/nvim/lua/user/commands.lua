@@ -20,8 +20,3 @@ vim.cmd([[
   cabbrev Wq wq
   cabbrev WQ wq
 ]])
-
--- Load abbreviations file
--- vim.cmd([[
---   source $HOME/.vim/abbreviations.vim
--- ]])
