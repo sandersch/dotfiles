@@ -5,4 +5,4 @@ alias gpf='git push origin HEAD --force-with-lease'
 alias gb='git co -b'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gwab="git worktree add -b"
-alias gwro="git worktree remove $OLDPWD"
+alias gwro="git worktree remove"
